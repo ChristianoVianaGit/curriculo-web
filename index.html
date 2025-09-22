@@ -1,311 +1,568 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Currículo - Christiano Viana</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Fonts + Bootstrap + Font Awesome + AOS -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    :root {
-      --petroleo: #34495e;
-      --petroleo-dark: #2c3e50;
-      --verde: #1abc9c;
-      --cinza-claro: #f4f4f4;
-    }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Currículo profissional de Christiano Viana, especialista em Ciência de Dados e Inteligência Artificial.">
+    <meta name="author" content="Christiano Viana">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Currículo - Christiano Viana</title>
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--cinza-claro);
-      margin: 0;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    header {
-      background-color: var(--petroleo-dark);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+  <body>
+    <header data-aos="fade-down">
+      <h1>Christiano Viana</h1>
+      <p>Cientista de Dados | Machine Learning & IA | SQL | Python</p>
+    </header>
 
-    nav {
-      background-color: var(--petroleo);
-    }
+    <nav role="navigation" aria-label="Navegação principal do currículo" class="d-flex justify-content-center flex-wrap p-2">
+      <button class="nav-button active" onclick="showTab('Apresentacao', event)" aria-controls="Apresentacao" aria-selected="true">Apresentação</button>
 
-    .nav-button {
-      color: white;
-      padding: 15px 20px;
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
+      <div class="dropdown">
+        <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Perfil</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" onclick="showTab('Sobre', event)" aria-controls="Sobre" aria-selected="false">Sobre</a></li>
+          <li><a class="dropdown-item" href="#" onclick="showTab('Resumo', event)" aria-controls="Resumo" aria-selected="false">Resumo Profissional</a></li>
+          <li><a class="dropdown-item" href="#" onclick="showTab('Objetivo', event)" aria-controls="Objetivo" aria-selected="false">Objetivo Profissional</a></li>
+        </ul>
+      </div>
 
-    .nav-button:hover,
-    .nav-button.active {
-      background-color: var(--verde);
-    }
+      <button class="nav-button" onclick="showTab('Formacao', event)" aria-controls="Formacao" aria-selected="false">Formação</button>
 
-    .dropdown-menu {
-      background-color: var(--petroleo);
-      border: none;
-    }
+      <div class="dropdown">
+        <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Experiência</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" onclick="showTab('Ferramentas', event)" aria-controls="Ferramentas" aria-selected="false">Ferramentas e Tecnologias</a></li>
+          <li><a class="dropdown-item" href="#" onclick="showTab('Habilidades', event)" aria-controls="Habilidades" aria-selected="false">Habilidades e Competências</a></li>
+          <li><a class="dropdown-item" href="#" onclick="showTab('Experiencia', event)" aria-controls="Experiencia" aria-selected="false">Experiência Profissional</a></li>
+        </ul>
+      </div>
 
-    .dropdown-item {
-      color: white;
-      padding: 12px 20px;
-    }
+      <div class="dropdown">
+        <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cursos</button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" onclick="showTab('Dados', event)" aria-controls="Dados" aria-selected="false">Capacitação Técnica em Dados e IA</a></li>
+          <li><a class="dropdown-item" href="#" onclick="showTab('Adicionais', event)" aria-controls="Adicionais" aria-selected="false">Capacitação Adicionais em TI</a></li>
+          <li><a class="dropdown-item" href="#" onclick="showTab('Transversais', event)" aria-controls="ransversais" aria-selected="false">Capacitação Transversais e Soft Skills</a></li>
+        </ul>
+      </div>
 
-    .dropdown-item:hover,
-    .dropdown-item.active {
-      background-color: var(--verde);
-      color: white;
-    }
+      <button class="nav-button" onclick="showTab('Contato', event)" aria-controls="Contato" aria-selected="false">Contato</button>
+    </nav>
 
-    .tab-content {
-      display: none;
-      padding: 40px 20px;
-      text-align: justify;
-      animation: fadeIn 0.5s ease-in-out;
-    }
+    <!-- Seções -->
+    <div id="Apresentacao" class="tab-content active" data-aos="fade-up" role="tabpanel" aria-labelledby="Apresentacao-tab">
+      <h2 id="Apresentacao-tab">Apresentação</h2><br>
+      <p>Graduado em Ciência de Dados, Matemática e Ciência da Computação, com especialização em Inteligência Artificial e cursando MBA em Business Intelligence, Management & Analytics; com mais de 20 anos de experiência em tecnologia da informação, atuando em projetos de engenharia de dados, integração de sistemas e liderança técnica, estou em transição estratégica para a área de Ciência de Dados e Inteligência Artificial — movido pelo propósito de transformar dados em soluções inteligentes que gerem valor real para os negócios.</p>
+      <p>Nos últimos meses, mergulhei em uma jornada intensa de capacitação técnica, com foco em Machine Learning, IA, Python e plataformas de nuvem como Azure e AWS. Essa evolução foi impulsionada por minha paixão por resolver problemas complexos com criatividade, visão analítica e colaboração. Além da bagagem técnica, trago maturidade profissional, experiência multicultural e uma abordagem orientada à melhoria contínua.</p>
+      <p>Ao longo da minha trajetória, liderei projetos de alta complexidade em empresas como Telefônica, Heineken, Generali e MAPFRE Seguros, sempre conectando tecnologia às necessidades estratégicas do negócio. Tenho domínio de ferramentas como SQL, Power BI, SSIS, Teradata, SAS, além de metodologias ágeis como Scrum e Kanban.</p>
+      <p>Acredito que minha combinação de experiência consolidada, atualização técnica e visão de futuro me tornam apto a contribuir com projetos inovadores e desafiadores. Estou entusiasmado com a possibilidade de integrar uma equipe que valorize dados como motor de transformação e impacto.</p>
+      <p>Agradeço pela oportunidade de apresentar meu perfil e coloco-me à disposição para uma conversa. Será um prazer contribuir com minha energia, conhecimento e propósito.</p>
+      <p>Atenciosamente,</p>
+      <p><strong><em>Christiano Viana</em></strong></p>
+    </div>
 
-    .tab-content.active {
-      display: block;
-    }
+    <div id="Sobre" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Sobre-tab">
+      <h2 id="Sobre-tab">Sobre</h2><br>
+      <p>Graduado em Ciência de Dados, Matemática e Ciência da Computação, com especialização em Inteligência Artificial e cursando MBA em Business Intelligence, Management & Analytics; com mais de 20 anos de experiência em tecnologia, navego por um universo de frameworks, linguagens de programação e arquitetura de sistemas, sempre buscando eficiência e inovação. Minha especialidade é traduzir desafios técnicos complexos em soluções estratégicas, conectando tecnologia e negócios com inteligência e visão.</p>
+      <p>Sou movido pela aprendizagem contínua e pela colaboração, atuando na constante capacitação e na troca de conhecimento. Acredito que grandes projetos surgem quando talento, comunicação e propósito se alinham, promovendo sinergia e impacto.</p>
+      <p>Além do mundo dos dados e da programação, a música é minha paixão. Assim como na tecnologia, vejo a arte como um instrumento de transformação, capaz de conectar ideias e pessoas. Nas horas vagas, sou músico, explorando novas sonoridades e aplicando criatividade no que faço, seja compondo melodias ou desenvolvendo soluções inovadoras.</p>
+      <p>Minha missão?<br>
+      Usar tecnologia e criatividade para resolver problemas, potencializar negócios e inspirar pessoas.</p>
+    </div>
 
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-    th { background-color: #ecf0f1; }
+    <div id="Resumo" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Resumo-tab">
+      <h2 id="Resumo-tab">Resumo Profissional</h2><br>
+      <p>Com mais de 20 anos de experiência na área de tecnologia, atualmente em transição para atuar como Cientista de Dados, com foco em Machine Learning e Inteligência Artificial. Tenho me dedicado intensamente à capacitação técnica nos últimos meses, buscando aplicar na prática os conhecimentos adquiridos, aliando minha bagagem profissional, visão estratégica e maturidade para enfrentar novos desafios e gerar valor por meio de soluções baseadas em dados.</p>
+    </div>
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    <div id="Objetivo" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Objetivo-tab">
+      <h2 id="Objetivo-tab">Objetivo Profissional</h2><br>
+      <p>Com sólida experiência em tecnologia da informação, engenharia de dados e integração de sistemas, em transição estratégica para a área de Ciência de Dados e Inteligência Artificial. Busco atuar em projetos que envolvam análise preditiva, modelagem estatística e arquitetura de dados, aplicando minha bagagem técnica e visão de negócio para gerar insights relevantes, otimizar processos e apoiar decisões estratégicas.</p>
+    </div>
 
-    .badge-tech {
-      background-color: var(--petroleo);
-      color: white;
-      margin: 5px;
-      padding: 8px 12px;
-      border-radius: 20px;
-      font-size: 14px;
-      display: inline-block;
-      max-width: 100%;
-      overflow-wrap: normal;
-      word-break: normal;
-    }
+    <div id="Formacao" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Formacao-tab">
+      <h2 id="Formacao-tab">Formação</h2><br>
+      <ul>
+        <li>MBA Latu Sensu, Business Intelligence, Management & Analytics<br>
+          Universidade São Judas Tadeu – Cursando</li><br>
+        <li>Pós-graduação Latu Sensu, Inteligência Artificial<br>
+          Universidade São Judas Tadeu</li><br>
+        <li>Graduação em Tecnologia, Ciência de Dados<br>
+          Universidade Uninove</li><br>
+        <li>Bacharelado, Matemática e Ciência da Computação<br>
+          Universidade Presbiteriana Mackenzie</li><br>
+      </ul>
+    </div>
 
-    footer {
-      background-color: var(--petroleo-dark);
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+    <div id="Ferramentas" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Ferramentas-tab">
+      <h2 id="Ferramentas-tab">Ferramentas e Tecnologias</h2><br>
+      <ul>
+        <li>Bancos de Dados e Linguagens SQL<br>
+          Oracle, Teradata, Postgre, MySQL, SQL Server.<br>
+          SQL, PL/SQL, Teradata SQL, COBOL SQL, HiveSQL</li><br>
+        <li>Ferramentas de Modelagem, Integração, Visualização e Analise de Dados.<br>
+          Erwin, Microsoft SQL Server Integration Services (SSIS), Power Center, Power BI, Microsoft Excel, SAS.</li><br>
+        <li>Linguagens de Programação e Scripts<br>
+          Python, COBOL, Dataflex, Shell Script, SQL.</li><br>
+      </ul>
+    </div>
 
-    .download-btn {
-      background-color: var(--petroleo);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
+    <div id="Habilidades" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Habilidades-tab">
+      <h2 id="Habilidades-tab">Habilidades e Competências</h2><br>
+      <span class="badge-tech">Análise de dados e Data-Driven</span>
+      <span class="badge-tech">Análise de sistemas </span>
+      <span class="badge-tech">Aprendizagem contínua e adaptabilidade</span>
+      <span class="badge-tech">Arquitetura de dados</span>
+      <span class="badge-tech">Banco de dados</span>
+      <span class="badge-tech">Computação em nuvem</span>
+      <span class="badge-tech">Comunicação clara e assertiva</span>
+      <span class="badge-tech">Decision making</span>
+      <span class="badge-tech">Documentação de fluxo de processo</span>
+      <span class="badge-tech">Engenharia de dados</span>
+      <span class="badge-tech">Estruturas de dados</span>
+      <span class="badge-tech">ETL (Extração, transformação e carregamento)</span>
+      <span class="badge-tech">Gestão de dados com foco em valor</span>
+      <span class="badge-tech">Gestão de projetos</span>
+      <span class="badge-tech">Git</span>
+      <span class="badge-tech">GitHub</span>
+      <span class="badge-tech">Habilidades analíticas</span>
+      <span class="badge-tech">Insights de negócios</span>
+      <span class="badge-tech">Integração de sistemas</span>
+      <span class="badge-tech">Inteligência Artificial e Machine Learning</span>
+      <span class="badge-tech">Inteligência de negócios (BI)</span>
+      <span class="badge-tech">Jira</span>
+      <span class="badge-tech">Kanban</span>
+      <span class="badge-tech">Liderança de equipe multifuncional</span>
+      <span class="badge-tech">Liderança de projetos e times ágeis</span>
+      <span class="badge-tech">Linux</span>
+      <span class="badge-tech">Manutenção de dados</span>
+      <span class="badge-tech">Melhoria contínua e inovação orientada por dados</span>
+      <span class="badge-tech">Metodologias agile</span>
+      <span class="badge-tech">Planejamento de projetos com metodologias ágeis</span>
+      <span class="badge-tech">Realização de testes</span>
+      <span class="badge-tech">Resolução de conflitos</span>
+      <span class="badge-tech">Resolução de problemas complexos</span>
+      <span class="badge-tech">Scrum</span>
+      <span class="badge-tech">Tecnologia da informação</span>
+      <span class="badge-tech">Trabalho em equipe e colaboração multifuncional</span>
+      <span class="badge-tech">Unix</span>
+      <span class="badge-tech">Visão estratégica e geração de insights de negócios</span>
+    </div>
 
-    .download-btn:hover {
-      background-color: var(--petroleo-dark);
-    }
-  </style>
-</head>
-<body>
+    <div id="Experiencia" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Experiencia-tab">
+      <h2 id="Experiencia-tab">Experiência Profissional</h2>
 
-<header data-aos="fade-down">
-  <h1>Christiano Viana</h1>
-  <p>Cientista de Dados | Machine Learning & IA | SQL | Python</p>
-</header>
-
-<nav class="d-flex justify-content-center flex-wrap p-2">
-  <button class="nav-button active" onclick="showTab('Apresentacao', event)">Apresentação</button>
-
-  <div class="dropdown">
-    <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Perfil
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#" onclick="showTab('Sobre', event)">Sobre</a></li>
-      <li><a class="dropdown-item" href="#" onclick="showTab('Resumo', event)">Resumo Profissional</a></li>
-      <li><a class="dropdown-item" href="#" onclick="showTab('Objetivo', event)">Objetivo Profissional</a></li>
-    </ul>
-  </div>
-
-  <button class="nav-button" onclick="showTab('Formacao', event)">Formação</button>
-
-  <div class="dropdown">
-    <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Experiência
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#" onclick="showTab('Ferramentas', event)">Ferramentas e Tecnologias</a></li>
-      <li><a class="dropdown-item" href="#" onclick="showTab('Habilidades', event)">Habilidades e Competências</a></li>
-      <li><a class="dropdown-item" href="#" onclick="showTab('Experiencia', event)">Experiência Profissional</a></li>
-    </ul>
-  </div>
-
-  <div class="dropdown">
-    <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Cursos
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#" onclick="showTab('Dados', event)">Capacitação Técnica em Dados e IA</a></li>
-      <li><a class="dropdown-item" href="#" onclick="showTab('Adicionais', event)">Capacitação Adicionais em TI</a></li>
-      <li><a class="dropdown-item" href="#" onclick="showTab('Transversais', event)">Capacitação Transversais e Soft Skills</a></li>
-    </ul>
-  </div>
-
-  <button class="nav-button" onclick="showTab('Contato', event)">Contato</button>
-</nav>
-
-<!-- Seções -->
-<div id="Apresentacao" class="tab-content active" data-aos="fade-up">
-  <h2>Apresentação</h2><br>
-  <p>Graduado em Ciência de Dados, Matemática e Ciência da Computação, com especialização em Inteligência Artificial e cursando MBA em Business Intelligence, Management & Analytics; com mais de 20 anos de experiência em tecnologia da informação, atuando em projetos de engenharia de dados, integração de sistemas e liderança técnica, estou em transição estratégica para a área de Ciência de Dados e Inteligência Artificial — movido pelo propósito de transformar dados em soluções inteligentes que gerem valor real para os negócios.</p>
-  <p>Nos últimos meses, mergulhei em uma jornada intensa de capacitação técnica, com foco em Machine Learning, IA, Python e plataformas de nuvem como Azure e AWS. Essa evolução foi impulsionada por minha paixão por resolver problemas complexos com criatividade, visão analítica e colaboração. Além da bagagem técnica, trago maturidade profissional, experiência multicultural e uma abordagem orientada à melhoria contínua.</p>
-  <p>Ao longo da minha trajetória, liderei projetos de alta complexidade em empresas como Telefônica, Heineken, Generali e MAPFRE, sempre conectando tecnologia às necessidades estratégicas do negócio. Tenho domínio de ferramentas como SQL, Power BI, SSIS, Teradata, SAS, além de metodologias ágeis como Scrum e Kanban.</p>
-  <p>Acredito que minha combinação de experiência consolidada, atualização técnica e visão de futuro me tornam apto a contribuir com projetos inovadores e desafiadores. Estou entusiasmado com a possibilidade de integrar uma equipe que valorize dados como motor de transformação e impacto.</p>
-  <p>Agradeço pela oportunidade de apresentar meu perfil e coloco-me à disposição para uma conversa. Será um prazer contribuir com minha energia, conhecimento e propósito.</p>
-  <p>Atenciosamente,</p>
-  <p><strong><em>Christiano Viana</em></strong></p>
-</div>
-
-<div id="Sobre" class="tab-content" data-aos="fade-up">
-  <h2>Sobre</h2><br>
-  <p>Graduado em Ciência de Dados, Matemática e Ciência da Computação, com especialização em Inteligência Artificial e cursando MBA em Business Intelligence, Management & Analytics; com mais de 20 anos de experiência em tecnologia, navego por um universo de frameworks, linguagens de programação e arquitetura de sistemas, sempre buscando eficiência e inovação. Minha especialidade é traduzir desafios técnicos complexos em soluções estratégicas, conectando tecnologia e negócios com inteligência e visão.</p>
-  <p>Sou movido pela aprendizagem contínua e pela colaboração, atuando na constante capacitação e na troca de conhecimento. Acredito que grandes projetos surgem quando talento, comunicação e propósito se alinham, promovendo sinergia e impacto.</p>
-  <p>Além do mundo dos dados e da programação, a música é minha paixão. Assim como na tecnologia, vejo a arte como um instrumento de transformação, capaz de conectar ideias e pessoas. Nas horas vagas, sou músico, explorando novas sonoridades e aplicando criatividade no que faço, seja compondo melodias ou desenvolvendo soluções inovadoras.</p>
-  <p>Minha missão?<br>
-  Usar tecnologia e criatividade para resolver problemas, potencializar negócios e inspirar pessoas.</p>
-</div>
-
-<div id="Resumo" class="tab-content" data-aos="fade-up">
-  <h2>Resumo Profissional</h2><br>
-  <p>Com mais de 20 anos de experiência na área de tecnologia, atualmente em transição para atuar como Cientista de Dados, com foco em Machine Learning e Inteligência Artificial. Tenho me dedicado intensamente à capacitação técnica nos últimos meses, buscando aplicar na prática os conhecimentos adquiridos, aliando minha bagagem profissional, visão estratégica e maturidade para enfrentar novos desafios e gerar valor por meio de soluções baseadas em dados.</p>
-</div>
-
-<div id="Objetivo" class="tab-content" data-aos="fade-up">
-  <h2>Objetivo Profissional</h2><br>
-  <p>Com sólida experiência em tecnologia da informação, engenharia de dados e integração de sistemas, em transição estratégica para a área de Ciência de Dados e Inteligência Artificial. Busco atuar em projetos que envolvam análise preditiva, modelagem estatística e arquitetura de dados, aplicando minha bagagem técnica e visão de negócio para gerar insights relevantes, otimizar processos e apoiar decisões estratégicas.</p>
-</div>
-
-<div id="Formacao" class="tab-content" data-aos="fade-up">
-  <h2>Formação Acadêmica</h2><br>
-  <ul>
-    <li>MBA Latu Sensu, Business Intelligence, Management & Analytics<br>
-      Universidade São Judas Tadeu – Cursando</li><br>
-    <li>Pós-graduação Latu Sensu, Inteligência Artificial<br>
-      Universidade São Judas Tadeu</li><br>
-    <li>Graduação em Tecnologia, Ciência de Dados<br>
-      Universidade Uninove</li><br>
-    <li>Bacharelado, Matemática e Ciência da Computação<br>
-      Universidade Presbiteriana Mackenzie</li><br>
-  </ul>
-</div>
-
-<div id="Ferramentas" class="tab-content" data-aos="fade-up">
-  <h2>Ferramentas e Tecnologias</h2><br>
-  <ul>
-    <li>Bancos de Dados e Linguagens SQL<br>
-      Oracle, Teradata, Postgre, MySQL, SQL Server.<br>
-      SQL, PL/SQL, Teradata SQL, COBOL SQL, HiveSQL</li><br>
-    <li>Ferramentas de Modelagem, Integração, Visualização e Analise de Dados.<br>
-      Erwin, Microsoft SQL Server Integration Services (SSIS), Power Center, Power BI, Microsoft Excel, SAS.</li><br>
-    <li>Linguagens de Programação e Scripts<br>
-      Python, COBOL, Dataflex, Shell Script, SQL.</li><br>
-  </ul>
-</div>
-
-<div id="Habilidades" class="tab-content" data-aos="fade-up">
-  <h2>Habilidades e Competências</h2><br>
-  <span class="badge-tech">Análise de dados e Data-Driven</span>
-  <span class="badge-tech">Análise de sistemas </span>
-  <span class="badge-tech">Aprendizagem contínua e adaptabilidade</span>
-  <span class="badge-tech">Arquitetura de dados</span>
-  <span class="badge-tech">Banco de dados</span>
-  <span class="badge-tech">Computação em nuvem</span>
-  <span class="badge-tech">Comunicação clara e assertiva</span>
-  <span class="badge-tech">Decision making</span>
-  <span class="badge-tech">Documentação de fluxo de processo</span>
-  <span class="badge-tech">Engenharia de dados</span>
-  <span class="badge-tech">Estruturas de dados</span>
-  <span class="badge-tech">ETL (Extração, transformação e carregamento)</span>
-  <span class="badge-tech">Gestão de dados com foco em valor</span>
-  <span class="badge-tech">Gestão de projetos</span>
-  <span class="badge-tech">Git</span>
-  <span class="badge-tech">GitHub</span>
-  <span class="badge-tech">Habilidades analíticas</span>
-  <span class="badge-tech">Insights de negócios</span>
-  <span class="badge-tech">Integração de sistemas</span>
-  <span class="badge-tech">Inteligência Artificial e Machine Learning</span>
-  <span class="badge-tech">Inteligência de negócios (BI)</span>
-  <span class="badge-tech">Jira</span>
-  <span class="badge-tech">Kanban</span>
-  <span class="badge-tech">Liderança de equipe multifuncional</span>
-  <span class="badge-tech">Liderança de projetos e times ágeis</span>
-  <span class="badge-tech">Linux</span>
-  <span class="badge-tech">Manutenção de dados</span>
-  <span class="badge-tech">Melhoria contínua e inovação orientada por dados</span>
-  <span class="badge-tech">Metodologias agile</span>
-  <span class="badge-tech">Planejamento de projetos com metodologias ágeis</span>
-  <span class="badge-tech">Realização de testes</span>
-  <span class="badge-tech">Resolução de conflitos</span>
-  <span class="badge-tech">Resolução de problemas complexos</span>
-  <span class="badge-tech">Scrum</span>
-  <span class="badge-tech">Tecnologia da informação</span>
-  <span class="badge-tech">Trabalho em equipe e colaboração multifuncional</span>
-  <span class="badge-tech">Unix</span>
-  <span class="badge-tech">Visão estratégica e geração de insights de negócios</span>
-</div>
-
-<div id="Experiencia" class="tab-content" data-aos="fade-up">
-  <h2>Experiência Profissional</h2>
-
-  <div class="accordion" id="accordionExperiencia">
-
-    <!-- Gap Year -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingGapYear">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGapYear" aria-expanded="false" aria-controls="collapseGapYear">
-          <div>
-            <ul>
-              <li><strong>GAP YEAR AND PROFESSIONAL DEVELOPMENT</strong><br>
-                <span>Agosto/2024 a setembro/2025</span><br>
-                <span>(1 ano e 2 meses)</span></li>
-            </ul>
-          </div>
-        </button>
-      </h2>
-      <div id="collapseGapYear" class="accordion-collapse collapse" aria-labelledby="headingGapYear" data-bs-parent="#accordionExperiencia">
-        <div class="accordion-body">
-          <div class="accordion" id="subAccordionGapYear">
-            <!-- Desenvolvimento Profissional -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingGapYear1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseGapYear1" aria-expanded="false" aria-controls="subCollapseGapYear1">
-                  <div>
-                    <ul>
-                      <li>Período de Desenvolvimento Pessoal e Profissional<br>
-                        <span>Agosto/2024 a setembro/2025</span><br>
-                        <span>(1 ano e 2 meses)</span></li>
-                    </ul>
+      <div class="accordion" id="accordionExperiencia">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingGapYear">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGapYear" aria-expanded="false" aria-controls="collapseGapYear">
+              <div>
+                <ul>
+                  <li><strong>GAP YEAR AND PROFESSIONAL DEVELOPMENT</strong><br>
+                    <span>Agosto/2024 a setembro/2025</span><br>
+                    <span>(1 ano e 2 meses)</span></li>
+                </ul>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseGapYear" class="accordion-collapse collapse" aria-labelledby="headingGapYear" data-bs-parent="#accordionExperiencia">
+            <div class="accordion-body">
+              <div class="accordion" id="subAccordionGapYear">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingGapYear1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseGapYear1" aria-expanded="false" aria-controls="subCollapseGapYear1">
+                      <div>
+                        <ul>
+                          <li>Período de Desenvolvimento Pessoal e Profissional<br>
+                            <span>Agosto/2024 a setembro/2025</span><br>
+                            <span>(1 ano e 2 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseGapYear1" class="accordion-collapse collapse" aria-labelledby="subHeadingGapYear1" data-bs-parent="#subAccordionGapYear">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Durante este período, realizei uma pausa estratégica na carreira com foco em aprimoramento técnico e pessoal. Dediquei-me intensamente ao estudo de novas tecnologias, especialmente nas áreas de Ciência de Dados, Machine Learning e Inteligência Artificial, por meio de cursos e formações complementares. Além da capacitação técnica, vivenciei experiências multiculturais em diferentes países, o que ampliou minha visão global, fortaleceu minha adaptabilidade e trouxe novas inspirações para minha atuação profissional. Também foi um momento de reconexão com valores pessoais, fortalecimento de vínculos familiares e desenvolvimento de habilidades comportamentais como resiliência, foco e equilíbrio emocional. Retorno ao mercado com energia renovada, propósito claro e sólida base de conhecimento, preparado para contribuir com soluções inovadoras e atuar com autenticidade, criatividade e foco em resultados.</li>
+                      </ul>
+                    </div>
                   </div>
-                </button>
-              </h2>
-              <div id="subCollapseGapYear1" class="accordion-collapse collapse" aria-labelledby="subHeadingGapYear1" data-bs-parent="#subAccordionGapYear">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Durante este período, realizei uma pausa estratégica na carreira com foco em aprimoramento técnico e pessoal. Dediquei-me intensamente ao estudo de novas tecnologias, especialmente nas áreas de Ciência de Dados, Machine Learning e Inteligência Artificial, por meio de cursos e formações complementares. Além da capacitação técnica, vivenciei experiências multiculturais em diferentes países, o que ampliou minha visão global, fortaleceu minha adaptabilidade e trouxe novas inspirações para minha atuação profissional. Também foi um momento de reconexão com valores pessoais, fortalecimento de vínculos familiares e desenvolvimento de habilidades comportamentais como resiliência, foco e equilíbrio emocional. Retorno ao mercado com energia renovada, propósito claro e sólida base de conhecimento, preparado para contribuir com soluções inovadoras e atuar com autenticidade, criatividade e foco em resultados.</li>
-                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingIndra">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndra" aria-expanded="false" aria-controls="collapseIndra">
+              <div>
+                <ul>
+                  <li><strong>INDRA SOLUÇÕES TECNOLÓGICAS</strong><br>
+                    <span>Outubro/2014 a julho/2025</span><br>
+                    <span>(9 anos e 10 meses)</span></li>
+                </ul>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseIndra" class="accordion-collapse collapse" aria-labelledby="headingIndra" data-bs-parent="#accordionExperiencia">
+            <div class="accordion-body">
+              <div class="accordion" id="subAccordionIndra">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingIndra1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra1" aria-expanded="false" aria-controls="subCollapseIndra1">
+                      <div>
+                        <ul>
+                          <li>Engenheiro de dados<br>
+                            <span>Agosto/2023 a julho/2024</span><br>
+                            <span>(1 ano)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseIndra1" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra1" data-bs-parent="#subAccordionIndra">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Manipulação de Dados:<br>
+                          Experiência em bases como SQL, Teradata e Oracle, utilizando Shell Script, HiveSQL e Teradata SQL para processos de carga. Criação e automação de processos ETL para otimização do fluxo de dados e integração entre sistemas diversos, assegurando eficiência e qualidade.</li>
+                        <li>Principais Contribuições:<br>
+                          Integração de dados e desenvolvimento de Datamart para CRM após aquisição da GVT pela Telefônica, garantindo o alinhamento estratégico.<br>
+                          Gestão da integração de dados de resseguro para a Seguradora Generali, assegurando consistência, qualidade e conformidade das informações.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingIndra2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra2" aria-expanded="false" aria-controls="subCollapseIndra2">
+                      <div>
+                        <ul>
+                          <li>Consultor BI<br>
+                            <span>Janeiro/2020 a julho/2023</span><br>
+                            <span>(3 anos 7 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseIndra2" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra2" data-bs-parent="#subAccordionIndra">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Liderança Técnica:<br>
+                          Liderança em projetos estratégicos, com foco na implementação de boas práticas e na melhoria contínua dos processos e soluções.</li>
+                        <li>Gestão de Projetos de TI (Ágil e Cascata):<br>
+                          Atuação como Scrum Master, promovendo metodologias ágeis e facilitando cerimônias ágeis (daily sprint planning, retrospectivas), com foco em feedback contínuo.</li>
+                        <li>Requisitos:<br>
+                          Interface com clientes para levantamento de requisitos e elaboração de especificações técnicas, garantindo entregas alinhadas às necessidades de negócio.</li>
+                        <li>Principais Contribuições:<br>
+                          Atuação como SM no projeto de ingestão de dados provenientes do sistema SAP ECC para o ambiente Azure Brasil da Heineken, garantindo entregas dentro dos prazos e alinhadas aos requisitos do negócio.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingIndra3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra3" aria-expanded="false" aria-controls="subCollapseIndra3">
+                      <div>
+                        <ul>
+                          <li>Analista BI<br>
+                            <span>Outubro/2014 a dezembro/2019</span><br>
+                            <span>(5 anos 3 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseIndra3" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra3" data-bs-parent="#subAccordionIndra">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Atuação como Data Analytics, conduzindo análises aprofundadas de resultados de pesquisas e bases de dados corporativos por meio do SAS Analytics, gerando análises estatísticas complementares e insights estratégicos para tomada de decisões de negócios. Criação e gerenciamento de bases de dados e KPIs para otimização de estratégias de IA na área de cobrança da Telefônica, resultando em maior eficiência e impacto nos resultados.</li>
+                        <li>Sustentação de processos em SSIS na Telefônica, com foco em melhorias e performance de sistemas departamentais.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMAPFRE2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMAPFRE2" aria-expanded="false" aria-controls="collapseMAPFRE2">
+              <div>
+                <ul>
+                  <li><strong>GRUPO SEGURADOR BANCO DO BRASIL E MAPFRE</strong><br>
+                    <span>Janeiro/2010 a setembro/2014</span><br>
+                    <span>(4 anos e 9 meses)</span></li>
+                </ul>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseMAPFRE2" class="accordion-collapse collapse" aria-labelledby="headingMAPFRE2" data-bs-parent="#accordionExperiencia">
+            <div class="accordion-body">
+              <div class="accordion" id="subAccordionMAPFRE2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingMAPFRE21">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseMAPFRE21" aria-expanded="false" aria-controls="subCollapseMAPFRE21">
+                      <div>
+                        <ul>
+                          <li>Project Leader<br>
+                            <span>Janeiro/2010 a setembro/2014</span><br>
+                            <span>(4 anos e 9 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseMAPFRE21" class="accordion-collapse collapse" aria-labelledby="subHeadingMAPFRE21" data-bs-parent="#subAccordionMAPFRE2">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Gestão de Projetos de TI:<br>
+                          Responsável por coordenar a entrega de projetos de TI oriundo das fábricas de software, gerenciando todos os aspectos do ciclo de vida do projeto, desde o levantamento de requisitos até a entrega final, garantindo que as entregas estivessem alinhadas com as expectativas do cliente, dentro dos prazos estabelecidos e atendendo aos requisitos de qualidade.</li>
+                        <li>Planejamento e Gestão de Prazos e Orçamento:<br>
+                          Liderança na definição de cronogramas, estimativas de custo e alocação de recursos para garantir a execução de projetos dentro do orçamento e dos prazos estabelecidos, supervisionando todas as fases do projeto, ajustando planos conforme necessário para mitigar riscos e resolver impedimentos.</li>
+                        <li>Gestão de Qualidade e Riscos:<br>
+                          Implementação de estratégias de controle de qualidade para garantir que os produtos entregues atendiam aos requisitos técnicos e de negócios. Realização de avaliações de risco contínuas e a implementação de planos de mitigação para minimizar o impacto de problemas durante o ciclo de vida do projeto.</li>
+                        <li>Gestão de Stakeholders e Comunicação:<br>
+                          Gerenciamento eficaz de stakeholders, mantendo todos alinhados aos objetivos e às mudanças de escopo, assegurando comunicação clara e contínua.</li>
+                        <li>Gestão de Equipe de Desenvolvimento:<br>
+                          Supervisão de equipe multidisciplinar, facilitando a comunicação entre os membros e garantindo que todos estivessem alinhados com os objetivos do projeto.</li>
+                        <li>Garantia de Qualidade e Entregas Bem-Sucedidas:<br>
+                          Atuação direta na validação de entregas, garantindo que as soluções desenvolvidas estivessem em conformidade com os requisitos técnicos e de negócio do cliente. Liderança no monitoramento de testes e na implementação de melhorias, resultando em entregas precisas e de alta qualidade.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingIBM">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIBM" aria-expanded="false" aria-controls="collapseIBM">
+              <div>
+                <ul>
+                  <li><strong>IBM BRASIL</strong><br>
+                    <span>Janeiro/2009 a dezembro/2009</span><br>
+                    <span>(1 ano)</span></li>
+                </ul>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseIBM" class="accordion-collapse collapse" aria-labelledby="headingIBM" data-bs-parent="#accordionExperiencia">
+            <div class="accordion-body">
+              <div class="accordion" id="subAccordionIBM">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingIBM1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIBM1" aria-expanded="false" aria-controls="subCollapseIBM1">
+                      <div>
+                        <ul>
+                          <li>Tech Lead<br>
+                            <span>Janeiro/2009 a dezembro/2009</span><br>
+                            <span>(1 ano)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseIBM1" class="accordion-collapse collapse" aria-labelledby="subHeadingIBM1" data-bs-parent="#subAccordionIBM">
+
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Liderança Técnica de Projetos:<br>
+                          Responsável pela orientação técnica em projetos, assegurando entregas bem-sucedidas e soluções de alta qualidade para o cliente MAPFRE Seguros, alinhado às expectativas e necessidades do negócio.</li>
+                          Atuação conjunta com equipes multidisciplinares de TI, promovendo o alinhamento de requisitos de projetos, garantindo a excelência técnica e entrega de soluções escaláveis e sustentáveis.</li>
+                        <li>Gestão de Sustentação:<br>
+                          Coordenação do time de sustentação, com foco na resolução de falhas em processos noturnos,garantindo a continuidade das operações e a mitigação de impactos no ambiente produtivo.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMAPFRE1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMAPFRE1" aria-expanded="false" aria-controls="collapseMAPFRE1">
+              <div>
+                <ul>
+                  <li><strong>GRUPO SEGURADOR BANCO DO BRASIL E MAPFRE</strong><br>
+                    <span>Outubro/2006 a dezembro/2008</span><br>
+                    <span>(2 anos e 3 meses)</span></li>
+                </ul>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseMAPFRE1" class="accordion-collapse collapse" aria-labelledby="headingMAPFRE1" data-bs-parent="#accordionExperiencia">
+            <div class="accordion-body">
+              <div class="accordion" id="subAccordionMAPFRE1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingMAPFRE11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseMAPFRE11" aria-expanded="false" aria-controls="subCollapseMAPFRE11">
+                      <div>
+                        <ul>
+                          <li>IT Consultant<br>
+                            <span>Outubro/2006 a dezembro/2008</span><br>
+                            <span>(2 anos e 3 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseMAPFRE11" class="accordion-collapse collapse" aria-labelledby="subHeadingMAPFRE11" data-bs-parent="#subAccordionMAPFRE1">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Melhoria Contínua:<br>
+                          Identificação de gargalos e implementação de melhorias no desenvolvimento e operações, otimizando o desempenho e a performance de processos.</li>
+                        <li>Documentação Técnica:<br>
+                          Criação de documentação técnica detalhada sobre processos e fluxos, garantindo clareza e suporte para outras equipes.</li>
+                        <li>Sustentação de Sistemas:<br>
+                          Atuação em processos de sustentação, com foco na resolução de falhas em rotinas noturnas, assegurando a continuidade e eficiência dos processos, minimizando impactos e implementando correções ágeis.</li>
+                        <li>Principais Contribuições:<br>
+                          Migração e Atualização de Banco de Dados: Participação no projeto de migração e upgrade do banco de dados Oracle 7.0 para a versão mais recente, assegurando a integridade, consistência e compliance dos dados.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingParmalat">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParmalat" aria-expanded="false" aria-controls="collapseParmalat">
+              <div>
+                <ul>
+                  <li><strong>PARMALAT BRASIL</strong><br>
+                    <span>Abril/2005 a setembro/2006</span><br>
+                    <span>(1 ano e 6 meses)</span></li>
+                </ul>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseParmalat" class="accordion-collapse collapse" aria-labelledby="headingParmalat" data-bs-parent="#accordionExperiencia">
+            <div class="accordion-body">
+              <div class="accordion" id="subAccordionParmalat">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingParmalat1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseParmalat1" aria-expanded="false" aria-controls="subCollapseParmalat1">
+                      <div>
+                        <ul>
+                          <li>Data Engineer<br>
+                            <span>Abril/2005 a setembro/2006</span><br>
+                            <span>(1 ano e 6 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseParmalat1" class="accordion-collapse collapse" aria-labelledby="subHeadingParmalat1" data-bs-parent="#subAccordionParmalat">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Migração de Sistemas e Banco de Dados:<br>
+                          Participação ativa no projeto de migração do BPCS ERP (Oracle PL-SQL / Dataflex) para o ERP Microsiga/TOTVS Protheus, incluindo mapeamento de regras de negócio, levantamento de requisitos, mapeamento de dados e análise de dados legados, desenvolvendo estratégias de transformação para assegurar a integridade dos dados e eficiência na transição do módulo de produtos.</li>
+                        <li>Documentação Técnica:<br>
+                          Elaboração de documentação técnica detalhada sobre processos de ETL, mapeamento de dados e fluxos de migração, oferecendo suporte para equipes futuras e stakeholders.</li>
+                        <li>Colaboração Multidisciplinar:<br>
+                          Trabalhei em conjunto com equipes de TI, como analistas de sistemas, DBAs e desenvolvedores, para alinhar os requisitos do projeto e garantir o sucesso da migração.</li>
+                        <li>Resultados Obtidos:<br>
+                          Migração concluída com 0% de falhas no processo de carga do módulo de produtos, garantindo a consistência e conformidade dos dados no novo sistema.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingHonda">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHonda" aria-expanded="false" aria-controls="collapseHonda">
+              <div>
+                <ul>
+                  <li><strong>HONDA MOTOS</strong><br>
+                    <span>Março/1996 a março/2005</span><br>
+                    <span>(9 anos e 1 mês)</span></li>
+                </ul>
+              </div>
+            </button>
+          </h2>
+          <div id="collapseHonda" class="accordion-collapse collapse" aria-labelledby="headingHonda" data-bs-parent="#accordionExperiencia">
+            <div class="accordion-body">
+              <div class="accordion" id="subAccordionHonda">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingHonda1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda1" aria-expanded="false" aria-controls="subCollapseHonda1">
+                      <div>
+                        <ul>
+                          <li>IT Specialist<br>
+                            <span>Novembro/2002 a março/2005</span><br>
+                            <span>(2 anos e 5 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseHonda1" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda1" data-bs-parent="#subAccordionHonda">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Gestão da aderência entre os processos de negócio e o sistema ERP proprietário, garantindo alinhamento estratégico e operacional.</li>
+                        <li>Levantamento e análise detalhada de requisitos, identificando necessidades e propondo soluções eficazes.</li>
+                        <li>Realização de análises de dados, incluindo relatórios e cruzamentos de informações, para suporte à tomada de decisão.</li>
+                        <li>Elaboração de especificações técnicas e funcionais, assegurando clareza e alinhamento com os objetivos do projeto.</li>
+                        <li>Coordenação de equipe técnica e liderança de projetos, promovendo entregas eficientes e de alta qualidade.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingHonda2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda2" aria-expanded="false" aria-controls="subCollapseHonda2">
+                      <div>
+                        <ul>
+                          <li>Systems Analyst | Developer<br>
+                            <span>Julho/1997 a outubro/2002</span><br>
+                            <span>(5 anos e 4 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseHonda2" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda2" data-bs-parent="#subAccordionHonda">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Análise e definição de requisitos funcionais e não funcionais, alinhados às necessidades do negócio.</li>
+                        <li>Desenvolvimento e implementação de novas funcionalidades para o ERP proprietário, focando na eficiência e usabilidade.</li>
+                        <li>Elaboração de documentação técnica e otimização de processos, garantindo conformidade e padronização.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="subHeadingHonda3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda3" aria-expanded="false" aria-controls="subCollapseHonda3">
+                      <div>
+                        <ul>
+                          <li>Support Analyst<br>
+                            <span>Março/1996 a junho/1997</span><br>
+                            <span>(1 ano e 4 meses)</span></li>
+                        </ul>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="subCollapseHonda3" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda3" data-bs-parent="#subAccordionHonda">
+                    <div class="accordion-body">
+                      <ul class="sub-bullet">
+                        <li>Manutenção e suporte ao sistema proprietário de integração Fábrica x Concessionária, garantindo a continuidade operacional e a resolução eficiente de problemas.</li>
+                        <li>Criação de manuais de procedimentos, elaboração de documentação técnica e realização de testes para assegurar a qualidade e a padronização.</li>
+                        <li>Treinamento e capacitação de usuários no sistema ERP em concessionárias em todo o Brasil, promovendo eficiência e melhor utilização da ferramenta.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -314,489 +571,101 @@
       </div>
     </div>
 
-    <!-- Indra -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingIndra">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndra" aria-expanded="false" aria-controls="collapseIndra">
-          <div>
-            <strong>INDRA SOLUÇÕES TECNOLÓCIAS</strong><br>
-            <span>Outubro/2014 a julho/2025</span><br>
-            <span>(9 anos e 10 meses)</span>
-          </div>
-        </button>
-      </h2>
-      <div id="collapseIndra" class="accordion-collapse collapse" aria-labelledby="headingIndra" data-bs-parent="#accordionExperiencia">
-        <div class="accordion-body">
-          <div class="accordion" id="subAccordionIndra">
-            <!-- Engenheiro de dados -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingIndra1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra1" aria-expanded="false" aria-controls="subCollapseIndra1">
-                  <div>
-                    Engenheiro de dados<br>
-                    <span>Agosto/2023 a julho/2024</span><br>
-                    <span>(1 ano)</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseIndra1" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra1" data-bs-parent="#subAccordionIndra">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Manipulação de Dados:<br>
-                      Experiência em bases como SQL, Teradata e Oracle, utilizando Shell Script, HiveSQL e Teradata SQL para processos de carga. Criação e automação de processos ETL para otimização do fluxo de dados e integração entre sistemas diversos, assegurando eficiência e qualidade.</li>
-                    <li>Principais Contribuições:<br>
-                      Integração de dados e desenvolvimento de Datamart para CRM após aquisição da GVT pela Telefônica, garantindo o alinhamento estratégico.<br>
-                      Gestão da integração de dados de resseguro para a Seguradora Generali, assegurando consistência, qualidade e conformidade das informações.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Consultor BI -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingIndra2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra2" aria-expanded="false" aria-controls="subCollapseIndra2">
-                  <div>
-                    Consultor BI<br>
-                    <span>Janeiro/2020 a julho/2023</span><br>
-                    <span>(3 anos 7 meses)</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseIndra2" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra2" data-bs-parent="#subAccordionIndra">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Liderança Técnica:<br>
-                      Liderança em projetos estratégicos, com foco na implementação de boas práticas e na melhoria contínua dos processos e soluções.</li>
-                    <li>Gestão de Projetos de TI (Ágil e Cascata):<br>
-                      Atuação como Scrum Master, promovendo metodologias ágeis e facilitando cerimônias ágeis (daily sprint planning, retrospectivas), com foco em feedback contínuo.</li>
-                    <li>Requisitos:<br>
-                      Interface com clientes para levantamento de requisitos e elaboração de especificações técnicas, garantindo entregas alinhadas às necessidades de negócio.</li>
-                    <li>Principais Contribuições:<br>
-                      Atuação como SM no projeto de ingestão de dados provenientes do sistema SAP ECC para o ambiente Azure Brasil da Heineken, garantindo entregas dentro dos prazos e alinhadas aos requisitos do negócio.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- •	Analista BI -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingIndra3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra3" aria-expanded="false" aria-controls="subCollapseIndra3">
-                  <div>
-                    Analista BI<br>
-                    <span>Outubro/2014 a dezembro/2019</span><br>
-                    <span>(5 anos 3 meses)</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseIndra3" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra3" data-bs-parent="#subAccordionIndra">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Atuação como Data Analytics, conduzindo análises aprofundadas de resultados de pesquisas e bases de dados corporativos por meio do SAS Analytics, gerando análises estatísticas complementares e insights estratégicos para tomada de decisões de negócios. Criação e gerenciamento de bases de dados e KPIs para otimização de estratégias de IA na área de cobrança da Telefônica, resultando em maior eficiência e impacto nos resultados.</li>
-                    <li>Sustentação de processos em SSIS na Telefônica, com foco em melhorias e performance de sistemas departamentais.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="Dados" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Dados-tab">
+      <h2 id="Dados-tab">Cursos de Capacitação Técnica em Dados e IA</h2><br>
+      <table>
+        <thead>
+          <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Aprendizado de Máquina</td><td>Universidade São Judas Tadeu</td><td style="text-align: center">09/2025</td><td style="text-align: center"><a href="https://mega.nz/file/Z3kCmZRT#IfVEzdDNnePS3XcrI3FqGAMb9mjXTb51YoqgnOw-LDY" target="_blank">Visualizar</a></td></tr>
+          <tr><td>Processamento de Linguagem Natural</td><td>Universidade São Judas Tadeu</td><td style="text-align: center">09/2025</td><td style="text-align: center"><a href="https://mega.nz/file/l3lRiKpD#YS1cIYMjG5cHXMicxFmUariFZh5iQ8sDjCFtXefn42s" target="_blank">Visualizar</a></td></tr>
+          <tr><td>Data Driven e Processo Decisório</td><td>Universidade São Judas Tadeu</td><td style="text-align: center">07/2025</td><td style="text-align: center"><a href="https://mega.nz/file/QydTSBaA#9jluecqvnCv_IMCbQDwB46JEDq1OXRi7JVVhhiTzTW8" target="_blank">Visualizar</a></td></tr>
+          <tr><td>Big Data & Analytics</td><td>FIAP</td><td style="text-align: center;">06/2025</td><td>Visualizar</td></tr>
+          <tr><td>Business Intelligence</td><td>FIAP</td><td style="text-align: center;">06/2025</td><td>Visualizar</td></tr>
+          <tr><td>Redes Neurais e Aprendizado Profundo</td><td>Universidade São Judas Tadeu</td><td style="text-align: center;">04/2025</td><td>Visualizar</td></tr>
+          <tr><td>AI900 – Microsoft Azure Fundamentals da IA</td><td>Fundação Bradesco</td><td style="text-align: center;">03/2025</td><td>Visualizar</td></tr>
+          <tr><td>Álgebra Linear para Ciência de Dados</td><td>Fundação Getúlio Vargas</td><td style="text-align: center;">03/2025</td><td>Visualizar</td></tr>
+          <tr><td>Engenharia de Dados – Fundamentos</td><td>Data Science Academy</td><td style="text-align: center;">03/2025</td><td>Visualizar</td></tr>
+          <tr><td>FluêncIA – Inteligência Artificial</td><td>Fundação Bradesco</td><td style="text-align: center;">03/2025</td><td>Visualizar</td></tr>
+          <tr><td>Soluções de IA no GitHub</td><td>Fundação Bradesco</td><td style="text-align: center;">03/2025</td><td>Visualizar</td></tr>
+          <tr><td>Data Science e Inteligência Artificial – Fundamentos</td><td>Data Science Academy</td><td style="text-align: center;">02/2025</td><td>Visualizar</td></tr>
+          <tr><td>Tomada de Decisões Guiadas por Dados</td><td>Universidade Mackenzie</td><td style="text-align: center;">02/2025</td><td>Visualizar</td></tr>
+          <tr><td>Microsoft Fabric – Arquitetura e Engenharia de Dados</td><td>Udemy</td><td style="text-align: center;">02/2024</td><td>Visualizar</td></tr>
+          <tr><td>IA – Algoritmos de Otimização em Python</td><td>Udemy</td><td style="text-align: center;">01/2024</td><td>Visualizar</td></tr>
+          <tr><td>PLN com spaCy e Python</td><td>Udemy</td><td style="text-align: center;">01/2024</td><td>Visualizar</td></tr>
+          <tr><td>Python para Data Science</td><td>Udemy</td><td style="text-align: center;">01/2024</td><td>Visualizar</td></tr>
+          <tr><td>Sumarização de Textos com PLN</td><td>Udemy</td><td style="text-align: center;">01/2024</td><td>Visualizar</td></tr>
+          <tr><td>Big Data e Inteligência Artificial – Fundamentos</td><td>Udemy</td><td style="text-align: center;">11/2023</td><td>Visualizar</td></tr>
+          <tr><td>Power BI + DAX</td><td>Udemy</td><td style="text-align: center;">10/2023</td><td>Visualizar</td></tr>
+          <tr><td>Redes Neurais Artificiais em Python</td><td>Udemy</td><td style="text-align: center;">10/2023</td><td>Visualizar</td></tr>
+          <tr><td>Modelagem Dimensional</td><td>Cetax Treinamento</td><td style="text-align: center;">08/2016</td><td>Visualizar</td></tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- MAPFRE2 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingMAPFRE2">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMAPFRE2" aria-expanded="false" aria-controls="collapseMAPFRE2">
-          <div>
-            <strong>GRUPO SEGURADOR BANCO DO BRASIL E MAPFRE</strong><br>
-            <span>Janeiro/2010 a setembro/2014 – 4 anos e 9 meses</span>
-          </div>
-        </button>
-      </h2>
-      <div id="collapseMAPFRE2" class="accordion-collapse collapse" aria-labelledby="headingMAPFRE2" data-bs-parent="#accordionExperiencia">
-        <div class="accordion-body">
-          <div class="accordion" id="subAccordionMAPFRE2">
-            <!-- Project Leader -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingMAPFRE21">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseMAPFRE21" aria-expanded="false" aria-controls="subCollapseMAPFRE21">
-                  <div>
-                    Project Leader<br>
-                    <span>Janeiro/2010 a setembro/2014 – 4 anos e 9 meses</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseMAPFRE21" class="accordion-collapse collapse" aria-labelledby="subHeadingMAPFRE21" data-bs-parent="#subAccordionMAPFRE2">
-
-                <div class="accordion-body">
-                  <ul>
-                    <li>Gestão de Projetos de TI:<br>
-                      Responsável por coordenar a entrega de projetos de TI oriundo das fábricas de software, gerenciando todos os aspectos do ciclo de vida do projeto, desde o levantamento de requisitos até a entrega final, garantindo que as entregas estivessem alinhadas com as expectativas do cliente, dentro dos prazos estabelecidos e atendendo aos requisitos de qualidade.</li>
-                    <li>Planejamento e Gestão de Prazos e Orçamento:<br>
-                      Liderança na definição de cronogramas, estimativas de custo e alocação de recursos para garantir a execução de projetos dentro do orçamento e dos prazos estabelecidos, supervisionando todas as fases do projeto, ajustando planos conforme necessário para mitigar riscos e resolver impedimentos.</li>
-                    <li>Gestão de Qualidade e Riscos:<br>
-                      Implementação de estratégias de controle de qualidade para garantir que os produtos entregues atendiam aos requisitos técnicos e de negócios. Realização de avaliações de risco contínuas e a implementação de planos de mitigação para minimizar o impacto de problemas durante o ciclo de vida do projeto.</li>
-                    <li>Gestão de Stakeholders e Comunicação:<br>
-                      Gerenciamento eficaz de stakeholders, mantendo todos alinhados aos objetivos e às mudanças de escopo, assegurando comunicação clara e contínua.</li>
-                    <li>Gestão de Equipe de Desenvolvimento:<br>
-                      Supervisão de equipe multidisciplinar, facilitando a comunicação entre os membros e garantindo que todos estivessem alinhados com os objetivos do projeto.</li>
-                    <li>Garantia de Qualidade e Entregas Bem-Sucedidas:<br>
-                      Atuação direta na validação de entregas, garantindo que as soluções desenvolvidas estivessem em conformidade com os requisitos técnicos e de negócio do cliente. Liderança no monitoramento de testes e na implementação de melhorias, resultando em entregas precisas e de alta qualidade.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="Adicionais" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Adicionais-tab">
+      <h2 id="Adicionais-tab">Cursos de Capacitação Adicionais em TI</h2><br>
+      <table>
+        <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
+        <tr><td>Blockchain</td><td>FIAP</td><td>06/2025</td><td>Visualizar</td></tr>
+        <tr><td>Blockchain</td><td>Advanced FIAP</td><td>06/2025</td><td>Visualizar</td></tr>
+        <tr><td>Versionamento de Código com Git e GitHub</td><td>DIO Academy</td><td>05/2025</td><td>Visualizar</td></tr>
+        <tr><td>Linguagem de Programação Python</td><td>Fundação Bradesco</td><td>04/2025</td><td>Visualizar</td></tr>
+        <tr><td>Python Development</td><td>FIAP</td><td>04/2025</td><td>Visualizar</td></tr>
+        <tr><td>AWS Cloud Practitioner Essentials</td><td>AWS Training and Certification</td><td>03/2025</td><td>Visualizar</td></tr>
+        <tr><td>Python</td><td>FIAP</td><td>03/2025</td><td>Visualizar</td></tr>
+        <tr><td>Certificação Google Cloud Associate Engineer (GCP)</td><td>Udemy</td><td>06/2024</td><td>Visualizar</td></tr>
+        <tr><td>Cloud Computing – Essencial</td><td>Udemy</td><td>11/2023</td><td>Visualizar</td></tr>
+        <tr><td>Segurança da Informação</td><td>Indra – In Company</td><td>11/2023</td><td>Visualizar</td></tr>
+        <tr><td>Gestão Ágil com Scrum</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
+        <tr><td>AZ900 – Microsoft Azure Fundamentals</td><td>Ka Solution</td><td>01/2023</td><td>Visualizar</td></tr>
+        <tr><td>BigData com Hadoop</td><td>Trainning Education Services</td><td>03/2017</td><td>Visualizar</td></tr>
+        <tr><td>Scrum – Gestão e Desenvolvimento Ágil de Projetos</td><td>Impacta Tecnologia</td><td>03/2015</td><td>Visualizar</td></tr>
+        <tr><td>Gestão de Projetos</td><td>Tekno Software E Serviços</td><td>04/2010</td><td>Visualizar</td></tr>
+        <tr><td>Formação Oracle Developer</td><td>IC Training – Inter-Commerce</td><td>11/2005</td><td>Visualizar</td></tr>
+        <tr><td>LCS – Linus Center Security (Red Hat)</td><td>Utah Computer Services</td><td>06/2005</td><td>Visualizar</td></tr>
+        <tr><td>LCP – Linus Center Professional (Red Hat)</td><td>Utah Computer Services</td><td>12/2004</td><td>Visualizar</td></tr>
+        <tr><td>LCA – Linus Center Administration (Red Hat)</td><td>Utah Computer Services</td><td>06/2004</td><td>Visualizar</td></tr>
+        <tr><td>Supporting MS Windows NT 4.0</td><td>Impacta Tecnologia</td><td>10/2001</td><td>Visualizar</td></tr>
+        <tr><td>Visual Dataflex 7.0</td><td>DataAccess – In Company</td><td>07/2000</td><td>Visualizar</td></tr>
+        <tr><td>Administração de Rede Novell Netware</td><td>Impacta Tecnologia</td><td>08/1999</td><td>Visualizar</td></tr>
+        <tr><td>Dataflex 3.1</td><td>DataAccess – In Company</td><td>12/1997</td><td>Visualizar</td></tr>
+        <tr><td>Visual Basic</td><td>Kyoei Facom</td><td>11/1995</td><td>Visualizar</td></tr>
+        <tr><td>Cobol Estruturado</td><td>Kyoei Facom</td><td>06/1995</td><td>Visualizar</td></tr>
+      </table>
     </div>
 
-    <!-- IBM -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingIBM">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIBM" aria-expanded="false" aria-controls="collapseIBM">
-          <div>
-            <strong>IBM Brasil</strong><br>
-            <span>Janeiro/2009 a dezembro/2009 – 1 ano</span>
-          </div>
-        </button>
-      </h2>
-      <div id="collapseIBM" class="accordion-collapse collapse" aria-labelledby="headingIBM" data-bs-parent="#accordionExperiencia">
-        <div class="accordion-body">
-          <div class="accordion" id="subAccordionIBM">
-            <!-- Tech Lead -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingIBM1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIBM1" aria-expanded="false" aria-controls="subCollapseIBM1">
-                  <div>
-                    Tech Lead<br>
-                    <span>Janeiro/2009 a dezembro/2009 – 1 ano</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseIBM1" class="accordion-collapse collapse" aria-labelledby="subHeadingIBM1" data-bs-parent="#subAccordionIBM">
-
-                <div class="accordion-body">
-                  <ul>
-                    <li>Liderança Técnica de Projetos:<br>
-                      Responsável pela orientação técnica em projetos, assegurando entregas bem-sucedidas e soluções de alta qualidade para o cliente MAPFRE Seguros, alinhado às expectativas e necessidades do negócio.</li>
-                      Atuação conjunta com equipes multidisciplinares de TI, promovendo o alinhamento de requisitos de projetos, garantindo a excelência técnica e entrega de soluções escaláveis e sustentáveis.</li>
-                    <li>Gestão de Sustentação:<br>
-                      Coordenação do time de sustentação, com foco na resolução de falhas em processos noturnos,garantindo a continuidade das operações e a mitigação de impactos no ambiente produtivo.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="Transversais" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Transversais-tab">
+      <h2 id="Transversais-tab">Cursos de Capacitação Transversais e Soft Skills</h2><br>
+      <table>
+        <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
+        <tr><td>Comunicação Eficaz</td><td>Udemy</td><td>02/2024</td><td>Visualizar</td></tr>
+        <tr><td>Ética e Compliance</td><td>Indra – In Company</td><td>11/2023</td><td>Visualizar</td></tr>
+        <tr><td>Design Thinking – Formação Inicial</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
+        <tr><td>Design Thinking de A a Z</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
+        <tr><td>Ética e Concorrência</td><td>Indra – In Company</td><td>10/2023</td><td>Visualizar</td></tr>
+        <tr><td>Leanmaking White Belt</td><td>Indra – In Company</td><td>10/2023</td><td>Visualizar</td></tr>
+        <tr><td>Sustentabilidade</td><td>Indra – In Company</td><td>10/2023</td><td>Visualizar</td></tr>
+        <tr><td>Formação e Gerenciamento de Equipes</td><td>Instituto de Ensino IPEB</td><td>06/2002</td><td>Visualizar</td></tr>
+      </table>
     </div>
 
-    <!-- MAPFRE1 -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingMAPFRE1">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMAPFRE1" aria-expanded="false" aria-controls="collapseMAPFRE1">
-          <div>
-            <strong>GRUPO SEGURADOR BANCO DO BRASIL E MAPFRE</strong><br>
-            <span>Outubro/2006 a dezembro/2008 – 2 anos e 3 meses</span>
-          </div>
-        </button>
-      </h2>
-      <div id="collapseMAPFRE1" class="accordion-collapse collapse" aria-labelledby="headingMAPFRE1" data-bs-parent="#accordionExperiencia">
-        <div class="accordion-body">
-          <div class="accordion" id="subAccordionMAPFRE1">
-            <!-- IT Consultant -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingMAPFRE11">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseMAPFRE11" aria-expanded="false" aria-controls="subCollapseMAPFRE11">
-                  <div>
-                    IT Consultant<br>
-                    <span>Outubro/2006 a dezembro/2008 – 2 anos e 3 meses</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseMAPFRE11" class="accordion-collapse collapse" aria-labelledby="subHeadingMAPFRE11" data-bs-parent="#subAccordionMAPFRE1">
-
-                <div class="accordion-body">
-                  <ul>
-                    <li>Melhoria Contínua:<br>
-                      Identificação de gargalos e implementação de melhorias no desenvolvimento e operações, otimizando o desempenho e a performance de processos.</li>
-                    <li>Documentação Técnica:<br>
-                      Criação de documentação técnica detalhada sobre processos e fluxos, garantindo clareza e suporte para outras equipes.</li>
-                    <li>Sustentação de Sistemas:<br>
-                      Atuação em processos de sustentação, com foco na resolução de falhas em rotinas noturnas, assegurando a continuidade e eficiência dos processos, minimizando impactos e implementando correções ágeis.</li>
-                    <li>Principais Contribuições:<br>
-                      Migração e Atualização de Banco de Dados: Participação no projeto de migração e upgrade do banco de dados Oracle 7.0 para a versão mais recente, assegurando a integridade, consistência e compliance dos dados.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="Contato" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Contato-tab">
+      <h2 id="Contato-tab">Contato</h2><br>
+      <p>Celular: +55 11 97231-0270</p>
+      <p>Email: <a href="mailto:christiano_viana@hotmail.com">christiano_viana@hotmail.com</a></p>
+      <p>Linkedin: <a href="https://www.linkedin.com/in/christianoviana" target="_blank">www.linkedin.com/in/christianoviana</a></p>
+      <br>
+      <a href="Christiano_Viana.pdf" target="_blank" class="download-btn">Baixar PDF</a>
     </div>
 
-    <!-- Parmalat -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingParmalat">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParmalat" aria-expanded="false" aria-controls="collapseParmalat">
-          <div>
-            <strong>PARMALAT BRASIL</strong><br>
-            <span>Abril/2005 a setembro/2006 – 1 ano e 6 meses</span>
-          </div>
-        </button>
-      </h2>
-      <div id="collapseParmalat" class="accordion-collapse collapse" aria-labelledby="headingParmalat" data-bs-parent="#accordionExperiencia">
-        <div class="accordion-body">
-          <div class="accordion" id="subAccordionParmalat">
-            <!-- Data Engineer -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingParmalat1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseParmalat1" aria-expanded="false" aria-controls="subCollapseParmalat1">
-                  <div>
-                    Data Engineer<br>
-                    <span>Abril/2005 a setembro/2006 – 1 ano e 6 meses</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseParmalat1" class="accordion-collapse collapse" aria-labelledby="subHeadingParmalat1" data-bs-parent="#subAccordionParmalat">
+    <footer>
+      <p>&copy; 2025 Christiano Viana. Todos os direitos reservados.</p>
+    </footer>
 
-                <div class="accordion-body">
-                  <ul>
-                    <li>Migração de Sistemas e Banco de Dados:<br>
-                      Participação ativa no projeto de migração do BPCS ERP (Oracle PL-SQL / Dataflex) para o ERP Microsiga/TOTVS Protheus, incluindo mapeamento de regras de negócio, levantamento de requisitos, mapeamento de dados e análise de dados legados, desenvolvendo estratégias de transformação para assegurar a integridade dos dados e eficiência na transição do módulo de produtos.</li>
-                    <li>Documentação Técnica:<br>
-                      Elaboração de documentação técnica detalhada sobre processos de ETL, mapeamento de dados e fluxos de migração, oferecendo suporte para equipes futuras e stakeholders.</li>
-                    <li>Colaboração Multidisciplinar:<br>
-                      Trabalhei em conjunto com equipes de TI, como analistas de sistemas, DBAs e desenvolvedores, para alinhar os requisitos do projeto e garantir o sucesso da migração.</li>
-                    <li>Resultados Obtidos:<br>
-                      Migração concluída com 0% de falhas no processo de carga do módulo de produtos, garantindo a consistência e conformidade dos dados no novo sistema.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Honda -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingHonda">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHonda" aria-expanded="false" aria-controls="collapseHonda">
-          <div>
-            <strong>HONDA MOTOS</strong><br>
-            <span>Março/1996 a março/2005 – 9 anos e 1 mês</span>
-          </div>
-        </button>
-      </h2>
-      <div id="collapseHonda" class="accordion-collapse collapse" aria-labelledby="headingHonda" data-bs-parent="#accordionExperiencia">
-        <div class="accordion-body">
-          <div class="accordion" id="subAccordionHonda">
-            <!-- IT Specialist -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingHonda1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda1" aria-expanded="false" aria-controls="subCollapseHonda1">
-                  <div>
-                    IT Specialist<br>
-                    <span>Novembro/2002 a março/2005 – 2 anos e 5 meses</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseHonda1" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda1" data-bs-parent="#subAccordionHonda">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Gestão da aderência entre os processos de negócio e o sistema ERP proprietário, garantindo alinhamento estratégico e operacional.</li>
-                    <li>Levantamento e análise detalhada de requisitos, identificando necessidades e propondo soluções eficazes.</li>
-                    <li>Realização de análises de dados, incluindo relatórios e cruzamentos de informações, para suporte à tomada de decisão.</li>
-                    <li>Elaboração de especificações técnicas e funcionais, assegurando clareza e alinhamento com os objetivos do projeto.</li>
-                    <li>Coordenação de equipe técnica e liderança de projetos, promovendo entregas eficientes e de alta qualidade.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Systems Analyst | Developer -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingHonda2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda2" aria-expanded="false" aria-controls="subCollapseHonda2">
-                  <div>
-                    Systems Analyst | Developer<br>
-                    <span>Julho/1997 a outubro/2002 – 5 anos e 4 meses</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseHonda2" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda2" data-bs-parent="#subAccordionHonda">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Análise e definição de requisitos funcionais e não funcionais, alinhados às necessidades do negócio.</li>
-                    <li>Desenvolvimento e implementação de novas funcionalidades para o ERP proprietário, focando na eficiência e usabilidade.</li>
-                    <li>Elaboração de documentação técnica e otimização de processos, garantindo conformidade e padronização.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Support Analyst -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="subHeadingHonda3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda3" aria-expanded="false" aria-controls="subCollapseHonda3">
-                  <div>
-                    Support Analyst<br>
-                    <span>Março/1996 a junho/1997 – 1 ano e 4 meses</span>
-                  </div>
-                </button>
-              </h2>
-              <div id="subCollapseHonda3" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda3" data-bs-parent="#subAccordionHonda">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Manutenção e suporte ao sistema proprietário de integração Fábrica x Concessionária, garantindo a continuidade operacional e a resolução eficiente de problemas.</li>
-                    <li>Criação de manuais de procedimentos, elaboração de documentação técnica e realização de testes para assegurar a qualidade e a padronização.</li>
-                    <li>Treinamento e capacitação de usuários no sistema ERP em concessionárias em todo o Brasil, promovendo eficiência e melhor utilização da ferramenta.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="Dados" class="tab-content">
-  <h2>Cursos de Capacitação Técnica em Dados e IA</h2>
-  <table>
-    <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
-    <tr><td>Aprendizado de Máquina</td><td>Universidade São Judas Tadeu</td><td>09/2025</td><td>Visualizar</td></tr>
-    <tr><td>Processamento de Linguagem Natural</td><td>Universidade São Judas Tadeu</td><td>09/2025</td><td>Visualizar</td></tr>
-    <tr><td>Data Driven e Processo Decisório</td><td>Universidade São Judas Tadeu</td><td>07/2025</td><td>Visualizar</td></tr>
-    <tr><td>Big Data & Analytics</td><td>FIAP</td><td>06/2025</td><td>Visualizar</td></tr>
-    <tr><td>Business Intelligence</td><td>FIAP</td><td>06/2025</td><td>Visualizar</td></tr>
-    <tr><td>Redes Neurais e Aprendizado Profundo</td><td>Universidade São Judas Tadeu</td><td>04/2025</td><td>Visualizar</td></tr>
-    <tr><td>AI900 – Microsoft Azure Fundamentals da IA</td><td>Fundação Bradesco</td><td>03/2025</td><td>Visualizar</td></tr>
-    <tr><td>Álgebra Linear para Ciência de Dados</td><td>Fundação Getúlio Vargas</td><td>03/2025</td><td>Visualizar</td></tr>
-    <tr><td>Engenharia de Dados – Fundamentos</td><td>Data Science Academy</td><td>03/2025</td><td>Visualizar</td></tr>
-    <tr><td>FluêncIA – Inteligência Artificial</td><td>Fundação Bradesco</td><td>03/2025</td><td>Visualizar</td></tr>
-    <tr><td>Soluções de IA no GitHub</td><td>Fundação Bradesco</td><td>03/2025</td><td>Visualizar</td></tr>
-    <tr><td>Data Science e Inteligência Artificial – Fundamentos</td><td>Data Science Academy</td><td>02/2025</td><td>Visualizar</td></tr>
-    <tr><td>Tomada de Decisões Guiadas por Dados</td><td>Universidade Mackenzie</td><td>02/2025</td><td>Visualizar</td></tr>
-    <tr><td>Microsoft Fabric – Arquitetura e Engenharia de Dados</td><td>Udemy</td><td>02/2024</td><td>Visualizar</td></tr>
-    <tr><td>IA – Algoritmos de Otimização em Python</td><td>Udemy</td><td>01/2024</td><td>Visualizar</td></tr>
-    <tr><td>PLN com spaCy e Python</td><td>Udemy</td><td>01/2024</td><td>Visualizar</td></tr>
-    <tr><td>Python para Data Science</td><td>Udemy</td><td>01/2024</td><td>Visualizar</td></tr>
-    <tr><td>Sumarização de Textos com PLN</td><td>Udemy</td><td>01/2024</td><td>Visualizar</td></tr>
-    <tr><td>Big Data e Inteligência Artificial – Fundamentos</td><td>Udemy</td><td>11/2023</td><td>Visualizar</td></tr>
-    <tr><td>Power BI + DAX</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>Redes Neurais Artificiais em Python</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>Modelagem Dimensional</td><td>Cetax Treinamento</td><td>08/2016</td><td>Visualizar</td></tr>
-  </table>
-</div>
-
-<div id="Adicionais" class="tab-content">
-  <h2>Cursos de Capacitação Adicionais em TI</h2>
-  <table>
-    <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
-    <tr><td>Blockchain</td><td>FIAP</td><td>06/2025</td><td>Visualizar</td></tr>
-    <tr><td>Blockchain</td><td>Advanced FIAP</td><td>06/2025</td><td>Visualizar</td></tr>
-    <tr><td>Versionamento de Código com Git e GitHub</td><td>DIO Academy</td><td>05/2025</td><td>Visualizar</td></tr>
-    <tr><td>Linguagem de Programação Python</td><td>Fundação Bradesco</td><td>04/2025</td><td>Visualizar</td></tr>
-    <tr><td>Python Development</td><td>FIAP</td><td>04/2025</td><td>Visualizar</td></tr>
-    <tr><td>AWS Cloud Practitioner Essentials</td><td>AWS Training and Certification</td><td>03/2025</td><td>Visualizar</td></tr>
-    <tr><td>Python</td><td>FIAP</td><td>03/2025</td><td>Visualizar</td></tr>
-    <tr><td>Certificação Google Cloud Associate Engineer (GCP)</td><td>Udemy</td><td>06/2024</td><td>Visualizar</td></tr>
-    <tr><td>Cloud Computing – Essencial</td><td>Udemy</td><td>11/2023</td><td>Visualizar</td></tr>
-    <tr><td>Segurança da Informação</td><td>Indra – In Company</td><td>11/2023</td><td>Visualizar</td></tr>
-    <tr><td>Gestão Ágil com Scrum</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>AZ900 – Microsoft Azure Fundamentals</td><td>Ka Solution</td><td>01/2023</td><td>Visualizar</td></tr>
-    <tr><td>BigData com Hadoop</td><td>Trainning Education Services</td><td>03/2017</td><td>Visualizar</td></tr>
-    <tr><td>Scrum – Gestão e Desenvolvimento Ágil de Projetos</td><td>Impacta Tecnologia</td><td>03/2015</td><td>Visualizar</td></tr>
-    <tr><td>Gestão de Projetos</td><td>Tekno Software E Serviços</td><td>04/2010</td><td>Visualizar</td></tr>
-    <tr><td>Formação Oracle Developer</td><td>IC Training – Inter-Commerce</td><td>11/2005</td><td>Visualizar</td></tr>
-    <tr><td>LCS – Linus Center Security (Red Hat)</td><td>Utah Computer Services</td><td>06/2005</td><td>Visualizar</td></tr>
-    <tr><td>LCP – Linus Center Professional (Red Hat)</td><td>Utah Computer Services</td><td>12/2004</td><td>Visualizar</td></tr>
-    <tr><td>LCA – Linus Center Administration (Red Hat)</td><td>Utah Computer Services</td><td>06/2004</td><td>Visualizar</td></tr>
-    <tr><td>Supporting MS Windows NT 4.0</td><td>Impacta Tecnologia</td><td>10/2001</td><td>Visualizar</td></tr>
-    <tr><td>Visual Dataflex 7.0</td><td>DataAccess – In Company</td><td>07/2000</td><td>Visualizar</td></tr>
-    <tr><td>Administração de Rede Novell Netware</td><td>Impacta Tecnologia</td><td>08/1999</td><td>Visualizar</td></tr>
-    <tr><td>Dataflex 3.1</td><td>DataAccess – In Company</td><td>12/1997</td><td>Visualizar</td></tr>
-    <tr><td>Visual Basic</td><td>Kyoei Facom</td><td>11/1995</td><td>Visualizar</td></tr>
-    <tr><td>Cobol Estruturado</td><td>Kyoei Facom</td><td>06/1995</td><td>Visualizar</td></tr>
-  </table>
-</div>
-
-<div id="Transversais" class="tab-content">
-  <h2>Cursos de Capacitação Transversais e Soft Skills</h2>
-  <table>
-    <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
-    <tr><td>Comunicação Eficaz</td><td>Udemy</td><td>02/2024</td><td>Visualizar</td></tr>
-    <tr><td>Ética e Compliance</td><td>Indra – In Company</td><td>11/2023</td><td>Visualizar</td></tr>
-    <tr><td>Design Thinking – Formação Inicial</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>Design Thinking de A a Z</td><td>Udemy</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>Ética e Concorrência</td><td>Indra – In Company</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>Leanmaking White Belt</td><td>Indra – In Company</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>Sustentabilidade</td><td>Indra – In Company</td><td>10/2023</td><td>Visualizar</td></tr>
-    <tr><td>Formação e Gerenciamento de Equipes</td><td>Instituto de Ensino IPEB</td><td>06/2002</td><td>Visualizar</td></tr>
-  </table>
-</div>
-
-<div id="Contato" class="tab-content" data-aos="fade-up">
-  <h2>Contato</h2><br>
-  <p>Celular: +55 11 97231-0270</p>
-  <p>Email: <a href="mailto:christiano_viana@hotmail.com">christiano_viana@hotmail.com</a></p>
-  <p>Linkedin: <a href="https://www.linkedin.com/in/christianoviana" target="_blank">www.linkedin.com/in/christianoviana</a></p>
-  <button class="download-btn">Baixar PDF</button>
-</div>
-
-  <footer>
-  <p>&copy; 2025 Christiano Viana. Todos os direitos reservados.</p>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-
-  function showTab(tabId, event) {
-    // Remove 'active' de todos os botões e links
-    document.querySelectorAll('.nav-button, .dropdown-item').forEach(el => el.classList.remove('active'));
-
-    // Remove 'active' das abas
-    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-
-    // Ativa a aba selecionada
-    document.getElementById(tabId).classList.add('active');
-
-    // Adiciona 'active' ao item clicado
-    if (event && event.target) {
-      event.target.classList.add('active');
-    }
-
-    // ✅ Dica extra: ativa o botão "Perfil" se clicou em item do dropdown
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    if (dropdownToggle && event.target.closest('.dropdown-menu')) {
-      dropdownToggle.classList.add('active');
-    } else if (dropdownToggle) {
-      dropdownToggle.classList.remove('active');
-    }
-  }
-</script>
-<script>
-  // Fecha o dropdown "Perfil" quando o mouse sair da área
-  const dropdown = document.querySelector('.dropdown');
-  const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-  const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-
-  dropdown.addEventListener('mouseleave', () => {
-    const bsDropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
-    if (bsDropdown) {
-      bsDropdown.hide();
-      dropdownToggle.classList.remove('active');
-    }
-  });
-
-  dropdown.addEventListener('mouseenter', () => {
-    const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(dropdownToggle);
-    bsDropdown.show();
-  });
-</script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+  </body>
 </html>
