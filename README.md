@@ -13,5 +13,5 @@ Ao longo da minha trajetória, liderei projetos de alta complexidade em empresas
 </p>
 
 <p align="justify">
-Agradeço pela oportunidade de apresentar meu perfil profissional e coloco-me à disposição para uma conversa. Será um prazer contribuir com minha energia, conhecimento e propósito.
+Agradeço AAAA   pela oportunidade de apresentar meu perfil profissional e coloco-me à disposição para uma conversa. Será um prazer contribuir com minha energia, conhecimento e propósito.
 </p>
