@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Painel de Acessos</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>Acessos ao Currículo e Portfólio</h2>
+  <canvas id="graficoAcessos" width="400" height="200"></canvas>
+
+<script>
+  async function carregarDados() {
+    const resposta = await fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/acessos");
+    const texto = await resposta.text();
+    console.log("Resposta bruta:", texto); // 👈 Veja no console do navegador
+
+    let dados;
+    try {
+      dados = JSON.parse(texto);
+    } catch (e) {
+      console.error("Erro ao parsear JSON:", e);
+      return;
+    }
+
+    const porData = {};
+    dados.forEach(item => {
+      if (item.timestamp) {
+        const dia = item.timestamp.split("T")[0];
+        porData[dia] = (porData[dia] || 0) + 1;
+      }
+    });
+
+    const labels = Object.keys(porData);
+    const valores = Object.values(porData);
+
+    new Chart(document.getElementById("graficoAcessos"), {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Acessos por dia',
+          data: valores,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)'
+        }]
+      }
+    });
+  }
+
+  carregarDados();
+</script>
+</body>
+</html>
