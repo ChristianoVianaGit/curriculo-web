@@ -1,8 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+  <meta charset="UTF-8">
   <title>Painel de Acessos</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <h2>Acessos ao Currículo e Portfólio</h2>
@@ -13,70 +32,81 @@
     <button onclick="carregarDados('portfolio')">Portfólio</button>
   </div>
 
-  <canvas id="graficoAcessos" width="400" height="200"></canvas>
+  <canvas id="graficoAcessos" width="600" height="300"></canvas>
 
-<script>
-  async function carregarDados(origemFiltro = null) {
-    const resposta = await fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/acessos");
-    const texto = await resposta.text();
+  <script>
+    let graficoAtual;
 
-    let dados;
-    try {
-      dados = JSON.parse(texto);
-    } catch (e) {
-      console.error("Erro ao parsear JSON:", e);
-      return;
-    }
+    async function carregarDados(origemFiltro = null) {
+      const resposta = await fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/acessos");
+      const texto = await resposta.text();
 
-    // Agrupa por dia e origem
-    const agrupado = {};
-    dados.forEach(item => {
-      if (item.timestamp && item.origem) {
-        const dia = item.timestamp.split("T")[0];
-        if (!agrupado[dia]) agrupado[dia] = { curriculo: 0, portfolio: 0 };
-        agrupado[dia][item.origem] = (agrupado[dia][item.origem] || 0) + 1;
+      let dados;
+      try {
+        dados = JSON.parse(texto);
+      } catch (e) {
+        console.error("Erro ao parsear JSON:", e);
+        return;
       }
-    });
 
-    const labels = Object.keys(agrupado).sort();
-    const curriculoData = labels.map(dia => agrupado[dia].curriculo || 0);
-    const portfolioData = labels.map(dia => agrupado[dia].portfolio || 0);
-
-    // Aplica filtro se necessário
-    let datasets = [];
-    if (!origemFiltro || origemFiltro === "curriculo") {
-      datasets.push({
-        label: 'Currículo',
-        data: curriculoData,
-        backgroundColor: 'rgba(75, 192, 192, 0.6)'
-      });
-    }
-    if (!origemFiltro || origemFiltro === "portfolio") {
-      datasets.push({
-        label: 'Portfólio',
-        data: portfolioData,
-        backgroundColor: 'rgba(255, 159, 64, 0.6)'
-      });
-    }
-
-    // Renderiza gráfico
-    new Chart(document.getElementById("graficoAcessos"), {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: datasets
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: 'top' },
-          title: { display: true, text: 'Acessos por Origem e Dia' }
+      // Agrupa por dia e origem
+      const agrupado = {};
+      dados.forEach(item => {
+        if (item.timestamp && item.origem) {
+          const dia = item.timestamp.split("T")[0];
+          if (!agrupado[dia]) agrupado[dia] = { curriculo: 0, portfolio: 0 };
+          agrupado[dia][item.origem] = (agrupado[dia][item.origem] || 0) + 1;
         }
-      }
-    });
-  }
+      });
 
-  carregarDados(); // Chamada inicial
-</script>
+      let labels = Object.keys(agrupado).sort();
+      let datasets = [];
+
+      if (origemFiltro) {
+        const valores = labels.map(dia => agrupado[dia][origemFiltro] || 0);
+        datasets.push({
+          label: origemFiltro.charAt(0).toUpperCase() + origemFiltro.slice(1),
+          data: valores,
+          backgroundColor: origemFiltro === "curriculo" ? 'rgba(75, 192, 192, 0.6)' : 'rgba(255, 159, 64, 0.6)'
+        });
+      } else {
+        const curriculoData = labels.map(dia => agrupado[dia].curriculo || 0);
+        const portfolioData = labels.map(dia => agrupado[dia].portfolio || 0);
+
+        datasets.push({
+          label: 'Currículo',
+          data: curriculoData,
+          backgroundColor: 'rgba(75, 192, 192, 0.6)'
+        });
+        datasets.push({
+          label: 'Portfólio',
+          data: portfolioData,
+          backgroundColor: 'rgba(255, 159, 64, 0.6)'
+        });
+      }
+
+      // Limpa gráfico anterior
+      if (graficoAtual) {
+        graficoAtual.destroy();
+      }
+
+      graficoAtual = new Chart(document.getElementById("graficoAcessos"), {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: datasets
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'top' },
+            title: { display: true, text: 'Acessos por Origem e Dia' }
+          }
+        }
+      });
+    }
+
+    carregarDados(); // Chamada inicial
+  </script>
 </body>
 </html>
