@@ -6,13 +6,19 @@
 </head>
 <body>
   <h2>Acessos ao Currículo e Portfólio</h2>
+
+  <div>
+    <button onclick="carregarDados()">Todos</button>
+    <button onclick="carregarDados('curriculo')">Currículo</button>
+    <button onclick="carregarDados('portfolio')">Portfólio</button>
+  </div>
+
   <canvas id="graficoAcessos" width="400" height="200"></canvas>
 
 <script>
-  async function carregarDados() {
+  async function carregarDados(origemFiltro = null) {
     const resposta = await fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/acessos");
     const texto = await resposta.text();
-    console.log("Resposta bruta:", texto); // 👈 Veja no console do navegador
 
     let dados;
     try {
@@ -22,31 +28,55 @@
       return;
     }
 
-    const porData = {};
+    // Agrupa por dia e origem
+    const agrupado = {};
     dados.forEach(item => {
-      if (item.timestamp) {
+      if (item.timestamp && item.origem) {
         const dia = item.timestamp.split("T")[0];
-        porData[dia] = (porData[dia] || 0) + 1;
+        if (!agrupado[dia]) agrupado[dia] = { curriculo: 0, portfolio: 0 };
+        agrupado[dia][item.origem] = (agrupado[dia][item.origem] || 0) + 1;
       }
     });
 
-    const labels = Object.keys(porData);
-    const valores = Object.values(porData);
+    const labels = Object.keys(agrupado).sort();
+    const curriculoData = labels.map(dia => agrupado[dia].curriculo || 0);
+    const portfolioData = labels.map(dia => agrupado[dia].portfolio || 0);
 
+    // Aplica filtro se necessário
+    let datasets = [];
+    if (!origemFiltro || origemFiltro === "curriculo") {
+      datasets.push({
+        label: 'Currículo',
+        data: curriculoData,
+        backgroundColor: 'rgba(75, 192, 192, 0.6)'
+      });
+    }
+    if (!origemFiltro || origemFiltro === "portfolio") {
+      datasets.push({
+        label: 'Portfólio',
+        data: portfolioData,
+        backgroundColor: 'rgba(255, 159, 64, 0.6)'
+      });
+    }
+
+    // Renderiza gráfico
     new Chart(document.getElementById("graficoAcessos"), {
       type: 'bar',
       data: {
         labels: labels,
-        datasets: [{
-          label: 'Acessos por dia',
-          data: valores,
-          backgroundColor: 'rgba(54, 162, 235, 0.6)'
-        }]
+        datasets: datasets
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: { display: true, text: 'Acessos por Origem e Dia' }
+        }
       }
     });
   }
 
-  carregarDados();
+  carregarDados(); // Chamada inicial
 </script>
 </body>
 </html>
