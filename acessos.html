@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acessos ao Currículo</title>
+</head>
+<body>
+  <h1>Acessos registrados</h1>
+  <ul id="lista"></ul>
+
+  <script>
+    fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/acessos")
+      .then(res => res.json())
+      .then(data => {
+        const lista = document.getElementById("lista");
+        data.Items.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = `${item.timestamp} - ${item.ip}`;
+          lista.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
