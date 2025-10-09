@@ -49,4 +49,4 @@ dropdowns.forEach(dropdown => {
   });
 });
 
-fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=curriculo")
+fetch("https://vitn0kfkej.execute-api.us-east-1.amazonaws.com/registrar?origem=curriculo");
