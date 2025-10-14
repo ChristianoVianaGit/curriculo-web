@@ -5,7 +5,7 @@
 </p>
 
 <p align="justify">
-  Nos últimos meses, mergulhei em uma jornada intensa de capacitação técnica, com foco em Machine Learning, IA, Python e plataformas de nuvem como Azure e AWS. Essa evolução foi impulsionada por minha paixão por resolver problemas complexos com criatividade, visão analítica e colaboração.
+  Tenho me dedicado intensamente a capacitação técnica, com foco em Machine Learning e Inteligência Artificial. Essa evolução foi impulsionada por minha paixão por resolver problemas complexos com criatividade.
 </p>
 
 <p align="justify">
