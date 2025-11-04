@@ -25,14 +25,7 @@
     <nav role="navigation" aria-label="Navegação principal do currículo" class="d-flex justify-content-center flex-wrap p-2">
       <button class="nav-button active" onclick="showTab('Apresentacao', event)" aria-controls="Apresentacao" aria-selected="true">Apresentação</button>
       <button class="nav-button" onclick="showTab('Formacao', event)" aria-controls="Formacao" aria-selected="false">Formação</button>
-
-      <div class="dropdown">
-        <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Experiência</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" onclick="showTab('Ferramentas', event)" aria-controls="Ferramentas" aria-selected="false">Ferramentas e Tecnologias</a></li>
-          <li><a class="dropdown-item" href="#" onclick="showTab('Experiencia', event)" aria-controls="Experiencia" aria-selected="false">Experiência Profissional</a></li>
-        </ul>
-      </div>
+      <button class="nav-button" onclick="showTab('Experiencia', event)" aria-controls="Experiencia" aria-selected="false">Experiência</button>
 
       <div class="dropdown">
         <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cursos</button>
@@ -73,21 +66,6 @@
       </ul>
     </div>
 
-    <div id="Ferramentas" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Ferramentas-tab">
-      <h2 id="Ferramentas-tab">Ferramentas e Tecnologias</h2><br>
-      <ul>
-        <li>Bancos de Dados e Linguagens SQL<br>
-          Oracle, Teradata, Postgre, MySQL, SQL Server, DynamoDB.<br>
-          SQL, PL/SQL, Teradata SQL, COBOL SQL, HiveSQL.</li><br>
-        <li>Computação em Nuvem (Cloud)<br>
-          Azure, AWS.</li><br>
-        <li>Big Data, Engenharia e Análise de Dados<br>
-          PySpark, Databricks, Power Center, Integration Services (SSIS), SAS (Enterprise Guide), Erwin.</li><br>
-        <li>Linguagens de Programação e Scripts<br>
-          Python, COBOL, Shell Script, Dataflex.</li><br>
-      </ul>
-    </div>
-
     <div id="Experiencia" class="tab-content" data-aos="fade-up" role="tabpanel" aria-labelledby="Experiencia-tab">
       <h2 id="Experiencia-tab">Experiência Profissional</h2>
 
@@ -97,9 +75,9 @@
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAutonomo" aria-expanded="false" aria-controls="collapseAutonomo">
               <div>
                 <ul>
-                  <li><strong>SOLUÇÕES SOB DEMANDA - AUTÔNOMO</strong><br>
-                    <span>Agosto/2025 a atualmente</span><br>
-                    <span>(3 meses)</span></li>
+                  <li><strong>ON-DEMAND SOLUTIONS</strong><br>
+                    <span>Janeiro/2025 a atualmente</span><br>
+                    <span>(11 meses)</span></li>
                 </ul>
               </div>
             </button>
@@ -112,9 +90,9 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseAutonomo1" aria-expanded="false" aria-controls="subCollapseAutonomo1">
                       <div>
                         <ul>
-                          <li>Engenheiro de Dados<br>
-                            <span>Agosto/2025 a atualmente</span><br>
-                            <span>(3 meses)</span></li>
+                          <li>Engenheiro de dados | Especialista (Data Engineer | Specialist)<br>
+                            <span>Janeiro/2025 a atualmente</span><br>
+                            <span>(11 meses)</span></li>
                         </ul>
                       </div>
                     </button>
@@ -123,14 +101,14 @@
                     <div class="accordion-body">
                       <ul class="sub-bullet">
                         <p>Atuação como Engenheiro de Dados em projetos desenvolvidos para empresas de diversos segmentos, com foco em soluções escaláveis, análise de dados e automação de processos.<p>
-                        <p>Principais responsabilidades e entregas incluem:</p>
+                        <p>Responsabilidades Principais:</p>
                         <ul class="sub-bullet">
                           <li>Construção de pipelines de dados utilizando Python e SQL;</li>
                           <li>Modelagem de dados e otimização de consultas em ambientes de Big Data, com uso de soluções em nuvem como AWS e Azure;</li>
                           <li>Integração de fontes diversas (bancos relacionais e não relacionais);</li>
                           <li>Utilização de Git e GitHub para versionamento e colaboração;</li>
                           <li>Aplicação de boas práticas de engenharia, como testes automatizados e documentação técnica;</li>
-                          <li>Apoio técnico em projetos de migração de dados;</li><br>
+                          <li>Apoio técnico em projetos de migração de dados;</li>
                           <li>Segurança e governança de dados, seguindo boas práticas e políticas como LGPD e GDPR.</li><br>
                         </ul>
                         <p>Projetos realizados de forma autônoma, com foco em resultados, confidencialidade e alinhamento às metas estratégicas de cada cliente.</p>
@@ -148,9 +126,9 @@
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGapYear" aria-expanded="false" aria-controls="collapseGapYear">
               <div>
                 <ul>
-                  <li><strong>GAP YEAR AND PROFESSIONAL DEVELOPMENT</strong><br>
-                    <span>Agosto/2024 a setembro/2025</span><br>
-                    <span>(1 ano e 2 meses)</span></li>
+                  <li><strong>PAUSA ESTRATÉGICA - GAP YEAR</strong><br>
+                    <span>Agosto/2024 a dezembro/2024</span><br>
+                    <span>(5 meses)</span></li>
                 </ul>
               </div>
             </button>
@@ -164,8 +142,8 @@
                       <div>
                         <ul>
                           <li>Período de Desenvolvimento Pessoal e Profissional<br>
-                            <span>Agosto/2024 a setembro/2025</span><br>
-                            <span>(1 ano e 2 meses)</span></li>
+                            <span>Agosto/2024 a dezembro/2024</span><br>
+                            <span>(5 meses)</span></li>
                         </ul>
                       </div>
                     </button>
@@ -173,7 +151,7 @@
                   <div id="subCollapseGapYear1" class="accordion-collapse collapse" aria-labelledby="subHeadingGapYear1" data-bs-parent="#subAccordionGapYear">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Durante este período, realizei uma pausa estratégica na carreira com foco em aprimoramento técnico e pessoal. Dediquei-me intensamente ao estudo de novas tecnologias, especialmente nas áreas de Ciência de Dados, Machine Learning e Inteligência Artificial, por meio de cursos e formações complementares. Além da capacitação técnica, vivenciei experiências multiculturais em diferentes países, o que ampliou minha visão global, fortaleceu minha adaptabilidade e trouxe novas inspirações para minha atuação profissional. Também foi um momento de reconexão com valores pessoais, fortalecimento de vínculos familiares e desenvolvimento de habilidades comportamentais como resiliência, foco e equilíbrio emocional. Retorno ao mercado com energia renovada, propósito claro e sólida base de conhecimento, preparado para contribuir com soluções inovadoras e atuar com autenticidade, criatividade e foco em resultados.</li>
+                        <p>Durante este período, realizei uma pausa estratégica na carreira com foco em aprimoramento técnico e pessoal. Dediquei-me intensamente ao estudo de novas tecnologias, especialmente nas áreas de <strong>Machine Learning</strong> e <strong>Inteligência Artificial</strong>, por meio de cursos e formações complementares. Além da capacitação técnica, vivenciei experiências multiculturais em diferentes países, o que ampliou minha visão global, fortaleceu minha adaptabilidade e trouxe novas inspirações para minha atuação profissional. Também foi um momento de reconexão com valores pessoais, fortalecimento de vínculos familiares e desenvolvimento de habilidades comportamentais como resiliência, foco e equilíbrio emocional. Retorno ao mercado com energia renovada, propósito claro e sólida base de conhecimento, preparado para contribuir com soluções inovadoras e atuar com autenticidade, criatividade e foco em resultados.</p>
                       </ul>
                     </div>
                   </div>
@@ -203,9 +181,9 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra1" aria-expanded="false" aria-controls="subCollapseIndra1">
                       <div>
                         <ul>
-                          <li>Engenheiro de Dados<br>
-                            <span>Agosto/2023 a julho/2024</span><br>
-                            <span>(1 ano)</span></li>
+                          <li>Engenheiro de Dados (Data Engineer)<br>
+                            <span>Março/2021 a julho/2024</span><br>
+                            <span>(3 anos e 5 meses)</span></li>
                         </ul>
                       </div>
                     </button>
@@ -213,11 +191,26 @@
                   <div id="subCollapseIndra1" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra1" data-bs-parent="#subAccordionIndra">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Manipulação de Dados:<br>
-                          Experiência em bases como SQL, Teradata e Oracle, utilizando Shell Script, HiveSQL e Teradata SQL para processos de carga. Criação e automação de processos ETL para otimização do fluxo de dados e integração entre sistemas diversos, assegurando eficiência e qualidade.</li>
-                        <li>Principais Contribuições:<br>
-                          Integração de dados e desenvolvimento de Datamart para CRM após aquisição da GVT pela Telefônica, garantindo o alinhamento estratégico.<br>
-                          Gestão da integração de dados de resseguro para a Seguradora Generali, assegurando consistência, qualidade e conformidade das informações.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Projetar, desenvolver e automatizar pipelines de dados (ETL/ELT) para coleta, transformação e carga de informações provenientes de múltiplas fontes (SQL, Oracle, Teradata, APIs, arquivos e streams), utilizando HiveSQL e Python.</li>
+                          <li>Construir e manter arquiteturas de dados escaláveis (Data Lakes, Data Warehouses e sistemas distribuídos), com foco em desempenho, segurança e governança.</li>
+                          <li>Garantir a qualidade, integridade e disponibilidade dos dados, implementando monitoramento contínuo e validações automatizadas.</li>
+                          <li>Integrar dados corporativos em ambientes de nuvem (AWS e Azure) e ferramentas de Big Data (Apache Spark, Hadoop, Hive, Databricks).</li>
+                          <li>Colaborar com times de Data Science e BI, assegurando dados limpos, acessíveis e prontos para análise e modelagem preditiva.</li>
+                          <li>Documentar fluxos, modelos e metadados conforme padrões de governança e compliance (LGPD, GDPR).</li>
+                          <li>Aprimorar a performance e escalabilidade dos sistemas de dados, aplicando boas práticas de engenharia e automação de processos</li>
+                        </ul><br>
+                        <p>Principais Contribuições e Resultados:</p>
+                        <ul class="sub-bullet">
+                          <li>Criação e gerenciamento de bases analíticas e KPIs para suporte a estratégias de Inteligência Artificial na área de Cobrança da Telefônica, resultando em aumento da eficiência operacional e precisão das ações de cobrança.</li>
+                          <li>Ingestão e transformação de dados provenientes do sistema SAP ECC para o ambiente Azure Databricks, garantindo confiabilidade e padronização no ecossistema de dados corporativos.</li>
+                          <li>Desenvolvimento de modelos preditivos em Python para previsão de churn de clientes, alcançando 85% de acurácia, o que contribuiu para redução de perdas e melhoria na retenção de clientes.</li>
+                        </ul><br>
+                        <p>Ferramentas e Tecnologias:</p>
+                        <ul class="sub-bullet">
+                          <li>SQL · Python · Hive · Apache Spark · Hadoop · Teradata · Oracle · Databricks · AWS · Azure · Linux · Data Lake · ETL/ELT · Data Governance · Data Modeling · Storytelling com Dados.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -227,9 +220,9 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra2" aria-expanded="false" aria-controls="subCollapseIndra2">
                       <div>
                         <ul>
-                          <li>Consultor BI<br>
-                            <span>Janeiro/2020 a julho/2023</span><br>
-                            <span>(3 anos 7 meses)</span></li>
+                          <li>Consultor de Business Intelligence (BI)<br>
+                            <span>Janeiro/2017 a fevereiro/2021</span><br>
+                            <span>(4 anos 2 meses)</span></li>
                         </ul>
                       </div>
                     </button>
@@ -237,14 +230,28 @@
                   <div id="subCollapseIndra2" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra2" data-bs-parent="#subAccordionIndra">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Liderança Técnica:<br>
-                          Liderança em projetos estratégicos, com foco na implementação de boas práticas e na melhoria contínua dos processos e soluções.</li>
-                        <li>Gestão de Projetos de TI (Ágil e Cascata):<br>
-                          Atuação como Scrum Master, promovendo metodologias ágeis e facilitando cerimônias ágeis (daily sprint planning, retrospectivas), com foco em feedback contínuo.</li>
-                        <li>Requisitos:<br>
-                          Interface com clientes para levantamento de requisitos e elaboração de especificações técnicas, garantindo entregas alinhadas às necessidades de negócio.</li>
-                        <li>Principais Contribuições:<br>
-                          Atuação como SM no projeto de ingestão de dados provenientes do sistema SAP ECC para o ambiente Azure Brasil da Heineken, garantindo entregas dentro dos prazos e alinhadas aos requisitos do negócio.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Realização de diagnósticos de necessidades de informação e mapeamento de demandas junto às áreas de negócio.</li>
+                          <li>Levantamento de requisitos funcionais e técnicos, elaboração de documentações e especificações detalhadas.</li>
+                          <li>Mapeamento e definição de KPIs e OKRs estratégicos, alinhados aos objetivos de cada área.</li>
+                          <li>Desenho de arquiteturas de dados e definição de pipelines de integração e transformação (ETL/ELT).</li>
+                          <li>Desenvolvimento de bases analíticas e data marts para geração de dashboards interativos e relatórios executivos.</li>
+                          <li>Monitoramento de desempenho e ROI das soluções implantadas, com foco em otimização contínua.</li>
+                          <li>Consultoria em Governança e Qualidade de Dados, assegurando conformidade com políticas internas e regulações (LGPD, GDPR).</li>
+                          <li>Liderança técnica e coordenação de projetos de BI, promovendo boas práticas de modelagem, automação e eficiência operacional.</li>
+                        </ul><br>
+                        <p>Principais Contribuições e Resultados:</p>
+                        <ul class="sub-bullet">
+                          <li>Condução de análises avançadas de dados corporativos e resultados de pesquisas utilizando SAS Analytics, gerando insights estratégicos que embasaram decisões de negócio de alto impacto.</li>
+                          <li>Redefinição de KPIs e estrutura de dados operacionais, resultando em aumento de 25% na acurácia das informações reportadas aos stakeholders.</li>
+                          <li>Liderança em projetos de integração de dados de resseguro para a Seguradora Generali, garantindo consistência, qualidade e compliance com padrões de auditoria.</li>
+                          <li>Automatização de rotinas de ETL e processos de integração entre múltiplos sistemas, reduzindo o tempo de processamento e carga de dados e melhorando a governança da informação.</li>
+                        </ul><br>
+                        <p>Ferramentas e Tecnologias:</p>
+                        <ul class="sub-bullet">
+                          <li>SQL · SSIS · Teradata · Oracle · PowerCenter · Erwin Data Modele · SAS Enterprise Guide · Linux · Shell Script · Modelagem Dimensional · Data Governance.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -254,9 +261,9 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIndra3" aria-expanded="false" aria-controls="subCollapseIndra3">
                       <div>
                         <ul>
-                          <li>Analista BI<br>
-                            <span>Outubro/2014 a dezembro/2019</span><br>
-                            <span>(5 anos 3 meses)</span></li>
+                          <li>Analista de Business Intelligence (BI)<br>
+                            <span>Outubro/2014 a dezembro/2016</span><br>
+                            <span>(2 anos 3 meses)</span></li>
                         </ul>
                       </div>
                     </button>
@@ -264,8 +271,26 @@
                   <div id="subCollapseIndra3" class="accordion-collapse collapse" aria-labelledby="subHeadingIndra3" data-bs-parent="#subAccordionIndra">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Atuação como Data Analytics, conduzindo análises aprofundadas de resultados de pesquisas e bases de dados corporativos por meio do SAS Analytics, gerando análises estatísticas complementares e insights estratégicos para tomada de decisões de negócios. Criação e gerenciamento de bases de dados e KPIs para otimização de estratégias de IA na área de cobrança da Telefônica, resultando em maior eficiência e impacto nos resultados.</li>
-                        <li>Sustentação de processos em SSIS na Telefônica, com foco em melhorias e performance de sistemas departamentais.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Coleta, integração e tratamento de dados provenientes de múltiplas fontes (ERP, CRM, planilhas e APIs).</li>
+                          <li>Modelagem e estruturação de bases analíticas e implementação de soluções em Data Warehouse.</li>
+                          <li>Monitoramento e análise de indicadores-chave de desempenho (KPIs) e métricas operacionais.</li>
+                          <li>Identificação de tendências e oportunidades de otimização em processos e fluxos de negócio.</li>
+                          <li>Suporte à tomada de decisão estratégica baseada em dados (data-driven decisions).</li>
+                          <li>Garantia da qualidade, integridade e segurança dos dados utilizados em análises e relatórios.</li>
+                        </ul><br>
+                        <p>Principais Contribuições e Resultados:</p>
+                        <ul class="sub-bullet">
+                          <li>Responsável pela manutenção e otimização de processos ETL em SQL Server Integration Services (SSIS), aumentando a performance e confiabilidade de rotinas departamentais.</li>
+                          <li>Modelagem e otimização de bases de dados relacionais Oracle, aprimorando o desempenho de relatórios financeiros críticos.</li>
+                          <li>Automatização de rotinas de ETL que integraram dados de 5 sistemas corporativos distintos, reduzindo em 40% o tempo de consolidação de informações.</li>
+                          <li>Desenvolvimento e integração de Datamart para CRM no contexto da fusão GVT–Telefônica, assegurando a consistência dos dados e o alinhamento estratégico entre as áreas de negócio.</li>
+                        </ul><br>
+                        <p>Ferramentas e Tecnologias:</p>
+                        <ul class="sub-bullet">
+                          <li>SQL · SSIS · Teradata · Oracle · PowerCenter · Erwin Data Modeler · Linux.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -295,7 +320,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseMAPFRE21" aria-expanded="false" aria-controls="subCollapseMAPFRE21">
                       <div>
                         <ul>
-                          <li>Project Leader<br>
+                          <li>Líder de Projetos (Project Leader)<br>
                             <span>Janeiro/2010 a setembro/2014</span><br>
                             <span>(4 anos e 9 meses)</span></li>
                         </ul>
@@ -305,18 +330,20 @@
                   <div id="subCollapseMAPFRE21" class="accordion-collapse collapse" aria-labelledby="subHeadingMAPFRE21" data-bs-parent="#subAccordionMAPFRE2">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Gestão de Projetos de TI:<br>
-                          Responsável por coordenar a entrega de projetos de TI oriundo das fábricas de software, gerenciando todos os aspectos do ciclo de vida do projeto, desde o levantamento de requisitos até a entrega final, garantindo que as entregas estivessem alinhadas com as expectativas do cliente, dentro dos prazos estabelecidos e atendendo aos requisitos de qualidade.</li>
-                        <li>Planejamento e Gestão de Prazos e Orçamento:<br>
-                          Liderança na definição de cronogramas, estimativas de custo e alocação de recursos para garantir a execução de projetos dentro do orçamento e dos prazos estabelecidos, supervisionando todas as fases do projeto, ajustando planos conforme necessário para mitigar riscos e resolver impedimentos.</li>
-                        <li>Gestão de Qualidade e Riscos:<br>
-                          Implementação de estratégias de controle de qualidade para garantir que os produtos entregues atendiam aos requisitos técnicos e de negócios. Realização de avaliações de risco contínuas e a implementação de planos de mitigação para minimizar o impacto de problemas durante o ciclo de vida do projeto.</li>
-                        <li>Gestão de Stakeholders e Comunicação:<br>
-                          Gerenciamento eficaz de stakeholders, mantendo todos alinhados aos objetivos e às mudanças de escopo, assegurando comunicação clara e contínua.</li>
-                        <li>Gestão de Equipe de Desenvolvimento:<br>
-                          Supervisão de equipe multidisciplinar, facilitando a comunicação entre os membros e garantindo que todos estivessem alinhados com os objetivos do projeto.</li>
-                        <li>Garantia de Qualidade e Entregas Bem-Sucedidas:<br>
-                          Atuação direta na validação de entregas, garantindo que as soluções desenvolvidas estivessem em conformidade com os requisitos técnicos e de negócio do cliente. Liderança no monitoramento de testes e na implementação de melhorias, resultando em entregas precisas e de alta qualidade.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Gestão de Projetos de TI (Ágil e Cascata): Responsável por coordenar a entrega de projetos de TI (Ágil e Cascata) oriundo das fábricas de software, gerenciando todos os aspectos do ciclo de vida do projeto, desde o levantamento de requisitos até a entrega final, garantindo que as entregas estivessem alinhadas com as expectativas do cliente, dentro dos prazos estabelecidos e atendendo aos requisitos de qualidade.</li>
+                          <li>Planejamento e Gestão de Prazos e Orçamento: Liderança na definição de cronogramas, estimativas de custo e alocação de recursos para garantir a execução de projetos dentro do orçamento e dos prazos estabelecidos, supervisionando todas as fases do projeto, ajustando planos conforme necessário para mitigar riscos e resolver impedimentos.</li>
+                          <li>Gestão de Qualidade e Riscos: Implementação de estratégias de controle de qualidade para garantir que os produtos entregues atendiam aos requisitos técnicos e de negócios. Realização de avaliações de risco contínuas e a implementação de planos de mitigação para minimizar o impacto de problemas durante o ciclo de vida do projeto.</li>
+                          <li>Gestão de Stakeholders e Comunicação: Gerenciamento eficaz de stakeholders, mantendo todos alinhados aos objetivos e às mudanças de escopo, assegurando comunicação clara e contínua.</li>
+                          <li>Gestão de Equipe de Desenvolvimento: Supervisão de equipe multidisciplinar, facilitando a comunicação entre os membros e garantindo que todos estivessem alinhados com os objetivos do projeto. </li>
+                          <li>Garantia de Qualidade e Entregas Bem-Sucedidas: Atuação direta na validação de entregas, garantindo que as soluções desenvolvidas estivessem em conformidade com os requisitos técnicos e de negócio do cliente.</li>
+                          <li>Liderança no monitoramento de testes e na implementação de melhorias, resultando em entregas precisas e de alta qualidade.</li>
+                        </ul><br>
+                        <p>Competências:</p>
+                        <ul class="sub-bullet">
+                          <li>Cobol · Planejamento de projetos · Oracle SQL Developer · Metodologias Agile · Resolução de problemas · Microsoft Excel · Banco de dados Oracle · Scrum · Kanban · Gestão de projetos · Melhoria contínua · Liderança de equipe multifuncional · Trabalho em equipe · Microsoft Office · Tecnologia da informação.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -346,7 +373,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseIBM1" aria-expanded="false" aria-controls="subCollapseIBM1">
                       <div>
                         <ul>
-                          <li>Tech Lead<br>
+                          <li>Líder Técnico (Tech Lead)<br>
                             <span>Janeiro/2009 a dezembro/2009</span><br>
                             <span>(1 ano)</span></li>
                         </ul>
@@ -354,14 +381,17 @@
                     </button>
                   </h2>
                   <div id="subCollapseIBM1" class="accordion-collapse collapse" aria-labelledby="subHeadingIBM1" data-bs-parent="#subAccordionIBM">
-
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Liderança Técnica de Projetos:<br>
-                          Responsável pela orientação técnica em projetos, assegurando entregas bem-sucedidas e soluções de alta qualidade para o cliente MAPFRE Seguros, alinhado às expectativas e necessidades do negócio.</li>
-                          Atuação conjunta com equipes multidisciplinares de TI, promovendo o alinhamento de requisitos de projetos, garantindo a excelência técnica e entrega de soluções escaláveis e sustentáveis.</li>
-                        <li>Gestão de Sustentação:<br>
-                          Coordenação do time de sustentação, com foco na resolução de falhas em processos noturnos,garantindo a continuidade das operações e a mitigação de impactos no ambiente produtivo.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Liderança Técnica de Projetos: Responsável pela orientação técnica em projetos, assegurando entregas bem-sucedidas e soluções de alta qualidade para o cliente MAPFRE Seguros, alinhado às expectativas e necessidades do negócio. Atuação conjunta com equipes multidisciplinares de TI, promovendo o alinhamento de requisitos de projetos, garantindo a excelência técnica e entrega de soluções escaláveis e sustentáveis.</li>
+                          <li>Gestão de Sustentação: Coordenação do time de sustentação, com foco na resolução de falhas em processos noturnos, garantindo a continuidade das operações e a mitigação de impactos no ambiente produtivo.</li>
+                        </ul><br>
+                        <p>Competências:</p>
+                        <ul class="sub-bullet">
+                          <li>Cobol · Oracle SQL Developer · Liderança técnica · SGBD · Microsoft Excel · Banco de dados Oracle · Realização de testes · Shell script · Linux · Trabalho em equipe · Tecnologia da informação · SQL.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -391,7 +421,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseMAPFRE11" aria-expanded="false" aria-controls="subCollapseMAPFRE11">
                       <div>
                         <ul>
-                          <li>IT Consultant<br>
+                          <li>Consultor de TI (IT Consultant)<br>
                             <span>Outubro/2006 a dezembro/2008</span><br>
                             <span>(2 anos e 3 meses)</span></li>
                         </ul>
@@ -401,14 +431,20 @@
                   <div id="subCollapseMAPFRE11" class="accordion-collapse collapse" aria-labelledby="subHeadingMAPFRE11" data-bs-parent="#subAccordionMAPFRE1">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Melhoria Contínua:<br>
-                          Identificação de gargalos e implementação de melhorias no desenvolvimento e operações, otimizando o desempenho e a performance de processos.</li>
-                        <li>Documentação Técnica:<br>
-                          Criação de documentação técnica detalhada sobre processos e fluxos, garantindo clareza e suporte para outras equipes.</li>
-                        <li>Sustentação de Sistemas:<br>
-                          Atuação em processos de sustentação, com foco na resolução de falhas em rotinas noturnas, assegurando a continuidade e eficiência dos processos, minimizando impactos e implementando correções ágeis.</li>
-                        <li>Principais Contribuições:<br>
-                          Migração e Atualização de Banco de Dados: Participação no projeto de migração e upgrade do banco de dados Oracle 7.0 para a versão mais recente, assegurando a integridade, consistência e compliance dos dados.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Melhoria Contínua: Identificação de gargalos e implementação de melhorias no desenvolvimento e operações, otimizando o desempenho e a performance de processos.</li>
+                          <li>Documentação Técnica: Criação de documentação técnica detalhada sobre processos e fluxos, garantindo clareza e suporte para outras equipes.</li>
+                          <li>Sustentação de Sistemas: Atuação em processos de sustentação, com foco na resolução de falhas em rotinas noturnas, assegurando a continuidade e eficiência dos processos, minimizando impactos e implementando correções ágeis.</li>
+                        </ul><br>
+                        <p>Principais Contribuições:</p>
+                        <ul class="sub-bullet">
+                          <li>Migração e Atualização de Banco de Dados: Participação no projeto de migração e upgrade do banco de dados Oracle 7.0 para a versão mais recente, assegurando a integridade, consistência e compliance dos dados.</li>
+                        </ul><br>
+                        <p>Competências:</p>
+                        <ul class="sub-bullet">
+                          <li>COBOL · Banco de dados · Programação · Oracle SQL Developer · PL/SQL · ETL (Extração, transformação e carregamento) · SGBD · Armazenamento · Banco de dados Oracle · Shell script · Trabalho em equipe · Tecnologia da informação · Linux · Forms · Report · SQL.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -438,7 +474,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseParmalat1" aria-expanded="false" aria-controls="subCollapseParmalat1">
                       <div>
                         <ul>
-                          <li>Data Engineer<br>
+                          <li>Engenheiro de Dados (Data Engineer)<br>
                             <span>Abril/2005 a setembro/2006</span><br>
                             <span>(1 ano e 6 meses)</span></li>
                         </ul>
@@ -448,14 +484,20 @@
                   <div id="subCollapseParmalat1" class="accordion-collapse collapse" aria-labelledby="subHeadingParmalat1" data-bs-parent="#subAccordionParmalat">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Migração de Sistemas e Banco de Dados:<br>
-                          Participação ativa no projeto de migração do BPCS ERP (Oracle PL-SQL / Dataflex) para o ERP Microsiga/TOTVS Protheus, incluindo mapeamento de regras de negócio, levantamento de requisitos, mapeamento de dados e análise de dados legados, desenvolvendo estratégias de transformação para assegurar a integridade dos dados e eficiência na transição do módulo de produtos.</li>
-                        <li>Documentação Técnica:<br>
-                          Elaboração de documentação técnica detalhada sobre processos de ETL, mapeamento de dados e fluxos de migração, oferecendo suporte para equipes futuras e stakeholders.</li>
-                        <li>Colaboração Multidisciplinar:<br>
-                          Trabalhei em conjunto com equipes de TI, como analistas de sistemas, DBAs e desenvolvedores, para alinhar os requisitos do projeto e garantir o sucesso da migração.</li>
-                        <li>Resultados Obtidos:<br>
-                          Migração concluída com 0% de falhas no processo de carga do módulo de produtos, garantindo a consistência e conformidade dos dados no novo sistema.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Migração de Sistemas e Banco de Dados: Participação ativa no projeto de migração do BPCS ERP (Oracle PL-SQL / Dataflex) para o ERP Microsiga/TOTVS Protheus, incluindo mapeamento de regras de negócio, levantamento de requisitos, mapeamento de dados e análise de dados legados, desenvolvendo estratégias de transformação para assegurar a integridade dos dados e eficiência na transição do módulo de produtos.</li>
+                          <li>Documentação Técnica: Elaboração de documentação técnica detalhada sobre processos de ETL, mapeamento de dados e fluxos de migração, oferecendo suporte para equipes futuras e stakeholders.</li>
+                          <li>Colaboração Multidisciplinar: Trabalhei em conjunto com equipes de TI, como analistas de sistemas, DBAs e desenvolvedores, para alinhar os requisitos do projeto e garantir o sucesso da migração.</li>
+                        </ul><br>
+                        <p>Resultados Obtidos:</p>
+                        <ul class="sub-bullet">
+                          <li>Migração concluída com 0% de falhas no processo de carga do módulo de produtos, garantindo a consistência e conformidade dos dados no novo sistema.</li>
+                        </ul><br>
+                        <p>Competências:</p>
+                        <ul class="sub-bullet">
+                          <li>Banco de dados · ETL (Extração, transformação e carregamento) · SGBD · Microsoft Excel · Trabalho em equipe · Tecnologia da informação · Documentação de fluxo de processo · SQL · PL/SQL · Linux  · Dataflex.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -485,7 +527,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda1" aria-expanded="false" aria-controls="subCollapseHonda1">
                       <div>
                         <ul>
-                          <li>IT Specialist<br>
+                          <li>Especialista (IT Specialist)<br>
                             <span>Novembro/2002 a março/2005</span><br>
                             <span>(2 anos e 5 meses)</span></li>
                         </ul>
@@ -495,11 +537,18 @@
                   <div id="subCollapseHonda1" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda1" data-bs-parent="#subAccordionHonda">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Gestão da aderência entre os processos de negócio e o sistema ERP proprietário, garantindo alinhamento estratégico e operacional.</li>
-                        <li>Levantamento e análise detalhada de requisitos, identificando necessidades e propondo soluções eficazes.</li>
-                        <li>Realização de análises de dados, incluindo relatórios e cruzamentos de informações, para suporte à tomada de decisão.</li>
-                        <li>Elaboração de especificações técnicas e funcionais, assegurando clareza e alinhamento com os objetivos do projeto.</li>
-                        <li>Coordenação de equipe técnica e liderança de projetos, promovendo entregas eficientes e de alta qualidade.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Gestão da aderência entre os processos de negócio e o sistema ERP proprietário, garantindo alinhamento estratégico e operacional.</li>
+                          <li>Levantamento e análise detalhada de requisitos, identificando necessidades e propondo soluções eficazes.</li>
+                          <li>Realização de análises de dados, incluindo relatórios e cruzamentos de informações, para suporte à tomada de decisão.</li>
+                          <li>Elaboração de especificações técnicas e funcionais, assegurando clareza e alinhamento com os objetivos do projeto.</li>
+                          <li>Coordenação de equipe técnica e liderança de projetos, promovendo entregas eficientes e de alta qualidade</li>
+                        </ul><br>
+                        <p>Competências:</p>
+                        <ul class="sub-bullet">
+                          <li>Unix · Banco de dados · ETL (Extração, transformação e carregamento) · Administração Unix · Dataflex · Liderança de equipe · Trabalho em equipe · Tecnologia da informação · Infraestrutura de tecnologia da informação · Documentação de fluxo de processo · SQL · Postgre · MySQL  · Visual Dataflex.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -509,7 +558,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda2" aria-expanded="false" aria-controls="subCollapseHonda2">
                       <div>
                         <ul>
-                          <li>Systems Analyst | Developer<br>
+                          <li>Analista de Sistemas | Desenvolvedor (Systems Analyst | Developer)<br>
                             <span>Julho/1997 a outubro/2002</span><br>
                             <span>(5 anos e 4 meses)</span></li>
                         </ul>
@@ -519,9 +568,16 @@
                   <div id="subCollapseHonda2" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda2" data-bs-parent="#subAccordionHonda">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Análise e definição de requisitos funcionais e não funcionais, alinhados às necessidades do negócio.</li>
-                        <li>Desenvolvimento e implementação de novas funcionalidades para o ERP proprietário, focando na eficiência e usabilidade.</li>
-                        <li>Elaboração de documentação técnica e otimização de processos, garantindo conformidade e padronização.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Análise e definição de requisitos funcionais e não funcionais, alinhados às necessidades do negócio.</li>
+                          <li>Desenvolvimento e implementação de novas funcionalidades para o ERP proprietário, focando na eficiência e usabilidade.</li>
+                          <li>Elaboração de documentação técnica e otimização de processos, garantindo conformidade e padronização.</li>
+                        </ul><br>
+                        <p>Competências:</p>
+                        <ul class="sub-bullet">
+                          <li>Banco de dados · Programação (computação) · Desenvolvimento de software · Melhoria contínua · Realização de testes · Trabalho em equipe · Tecnologia da informação.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -531,7 +587,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#subCollapseHonda3" aria-expanded="false" aria-controls="subCollapseHonda3">
                       <div>
                         <ul>
-                          <li>Support Analyst<br>
+                          <li>Analista de Suporte (Support Analyst)<br>
                             <span>Março/1996 a junho/1997</span><br>
                             <span>(1 ano e 4 meses)</span></li>
                         </ul>
@@ -541,9 +597,16 @@
                   <div id="subCollapseHonda3" class="accordion-collapse collapse" aria-labelledby="subHeadingHonda3" data-bs-parent="#subAccordionHonda">
                     <div class="accordion-body">
                       <ul class="sub-bullet">
-                        <li>Manutenção e suporte ao sistema proprietário de integração Fábrica x Concessionária, garantindo a continuidade operacional e a resolução eficiente de problemas.</li>
-                        <li>Criação de manuais de procedimentos, elaboração de documentação técnica e realização de testes para assegurar a qualidade e a padronização.</li>
-                        <li>Treinamento e capacitação de usuários no sistema ERP em concessionárias em todo o Brasil, promovendo eficiência e melhor utilização da ferramenta.</li>
+                        <p>Responsabilidades Principais:</p>
+                        <ul class="sub-bullet">
+                          <li>Manutenção e suporte ao sistema proprietário de integração Fábrica x Concessionária, garantindo a continuidade operacional e a resolução eficiente de problemas.</li>
+                          <li>Criação de manuais de procedimentos, elaboração de documentação técnica e realização de testes para assegurar a qualidade e a padronização.</li>
+                          <li>Treinamento e capacitação de usuários no sistema ERP em concessionárias em todo o Brasil, promovendo eficiência e melhor utilização da ferramenta.</li>
+                        </ul><br>
+                        <p>Competências:</p>
+                        <ul class="sub-bullet">
+                          <li>Atendimento ao cliente · Banco de dados · Suporte ao cliente · SGBD · Microsoft Windows · Realização de testes · Trabalho em equipe · Microsoft Office · Infraestrutura · Suporte técnico · Tecnologia da informação.</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
@@ -562,30 +625,30 @@
           <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
         </thead>
         <tbody>
-          <tr><td>Aprendizado de Máquina</td><td>Universidade São Judas Tadeu</td><td style="text-align: center">09/2025</td><td style="text-align: center"><a href=https://1drv.ms/b/c/6ffe10c77c6b1869/EYNpXlsMbtJHgBT6YpNpa1gBeqcaqyT0oG3OxlaQ9fzQDQ?e=KB3YFZ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Databricks Fundamentals</td><td>Databricks Academy</td><td style="text-align: center">09/2025</td><td style="text-align: center"><a href=https://1drv.ms/b/c/6ffe10c77c6b1869/EemNMHu2zrRHpVF_VNl6PzwBp6dN9pEL04tW-hrrqq8KlQ?e=ptQiuz" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Databricks para Engenharia de Dados</td><td>Databricks Academy</td><td style="text-align: center">09/2025</td><td style="text-align: center"><a href=https://1drv.ms/b/c/6ffe10c77c6b1869/Eeu7UJ5N9PJPrAHtvpu6wy0Bl-GHPOtxVVpZ9AolznvwAA?e=G1jzhj" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Processamento de Linguagem Natural</td><td>Universidade São Judas Tadeu</td><td style="text-align: center">09/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EajQSWb12gBDteOKRntgpSABdCL9TpUKqnCwe1NfGmo3Vw?e=30hgur" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Data Driven e Processo Decisório</td><td>Universidade São Judas Tadeu</td><td style="text-align: center">07/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EUK0nvyOAHxEg14wRL_zWJEBVj2Xv2zj7Ye_8HE5rdkoiw?e=QHgXDS" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Big Data & Analytics</td><td>FIAP</td><td style="text-align: center;">06/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/Efo_hl0ECJlCl_0EHIhgLWwBr0vuejjBFXeNMvcFzfJgVA?e=GwdPkZ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Business Intelligence (BI)</td><td>FIAP</td><td style="text-align: center">06/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ETJaCJNkgApOj12dcgmkloUBnOdR3eXO9y-J-DRbBj8Dqg?e=r8lKZ9" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Redes Neurais e Aprendizado Profundo</td><td>Universidade São Judas Tadeu</td><td style="text-align: center">04/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EUXbJVpFYS1BriaUo39kEt4BSfp1XpqbhAr2X6XXIswNbw?e=qnX1FN" target="_blank">Visualizar</a></td></tr>
-          <tr><td>AI900 – Microsoft Azure Fundamentals da IA</td><td>Fundação Bradesco</td><td style="text-align: center">03/2025</td><td style="text-align: center"><a href="https://lms.ev.org.br/mpls/Web/Lms/Student/PrintCertificateDownload.ashx?uid=12137054&p=BFfaI1MIFhxrFhpMqtYQkUt1d97sfd5N" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Álgebra Linear e Ciência de Dados</td><td>Fundação Getúlio Vargas</td><td style="text-align: center">03/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EXjhhiinZFBPmnvmTTADMjIB04GopbQQoFwnyMgph8DwHA?e=PgDjZ3" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Engenharia de Dados – Fundamentos</td><td>Data Science Academy</td><td style="text-align: center">03/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EVwy2dr1TLhFjGOYb1chmBkBOevFdbSW7igmftZC611xFQ?e=UmgufC" target="_blank">Visualizar</a></td></tr>
-          <tr><td>FluêncIA – Inteligência Artificial</td><td>Fundação Bradesco</td><td style="text-align: center">03/2025</td><td style="text-align: center"><a href="https://lms.ev.org.br/mpls/Web/Lms/Student/PrintCertificateDownload.ashx?uid=12137054&p=BFfaI1MIFhx79L4F9SAXJN5CD4oSgANF" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Soluções de IA no GitHub</td><td>Fundação Bradesco</td><td style="text-align: center">03/2025</td><td style="text-align: center"><a href="https://lms.ev.org.br/mpls/Web/Lms/Student/PrintCertificateDownload.ashx?uid=12137054&p=BFfaI1MIFhwAhw8keSH3tlBdttjPkmKJ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Data Science e Inteligência Artificial – Fundamentos</td><td>Data Science Academy</td><td style="text-align: center">02/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ETBgcv5Lac9Ms9qD45TB1g0BvfiG7g4zHoWKpvOSP5R--w?e=LwmwKf" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Tomada de Decisões Guiadas por Dados</td><td>Universidade Mackenzie</td><td style="text-align: center">02/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EcbWkWOLFKlFp2u9y66kVXcBwEIuGSpDxPzs7iSPAOa4qg?e=ypA08y" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Microsoft Fabric – Arquitetura e Engenharia de Dados</td><td>Udemy</td><td style="text-align: center">02/2024</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-4f5c3e26-fd21-4138-b589-f98734e047a9/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>IA – Algoritmos de Otimização em Python</td><td>Udemy</td><td style="text-align: center">01/2024</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-ac055fea-3b61-4b4a-b5d4-eeff8d967c4d/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>PLN com spaCy e Python</td><td>Udemy</td><td style="text-align: center">01/2024</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-ebeb0e5c-0a47-4b01-8ac3-a3ac8789996c/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Python para Data Science</td><td>Udemy</td><td style="text-align: center">01/2024</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-d1069ff3-a089-4d6b-a2de-f81789fa6d23/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Sumarização de Textos com PLN</td><td>Udemy</td><td style="text-align: center">01/2024</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-2fecfd2d-2bae-46d6-9182-7a715bfb66fe/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Big Data e Inteligência Artificial – Fundamentos</td><td>Udemy</td><td style="text-align: center">11/2023</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-8f34887a-c0ec-492c-89a2-4d41f8950719/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Power BI + DAX</td><td>Udemy</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-bbf98a96-2729-45a1-9f92-99c264b41579/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Redes Neurais Artificiais em Python</td><td>Udemy</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-a8d8414d-e0fe-4a0e-9e61-2658b8fcc363/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Modelagem Dimensional</td><td>Cetax Treinamento</td><td style="text-align: center">08/2016</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
+          <tr><td>Aprendizado de Máquina</td><td>Universidade São Judas Tadeu</td></tr>
+          <tr><td>Databricks Fundamentals</td><td>Databricks Academy</td></tr>
+          <tr><td>Databricks para Engenharia de Dados</td><td>Databricks Academy</td></tr>
+          <tr><td>Processamento de Linguagem Natural</td><td>Universidade São Judas Tadeu</td></tr>
+          <tr><td>Data Driven e Processo Decisório</td><td>Universidade São Judas Tadeu</td></tr>
+          <tr><td>Big Data & Analytics</td><td>FIAP</td><td style="text-align: center;">06/2025</td></tr>
+          <tr><td>Business Intelligence (BI)</td><td>FIAP</td><td style="text-align: center">06/2025</td></tr>
+          <tr><td>Redes Neurais e Aprendizado Profundo</td><td>Universidade São Judas Tadeu</td></tr>
+          <tr><td>AI900 – Microsoft Azure Fundamentals da IA</td><td>Fundação Bradesco</td></tr>
+          <tr><td>Álgebra Linear e Ciência de Dados</td><td>Fundação Getúlio Vargas</td></tr>
+          <tr><td>Engenharia de Dados – Fundamentos</td><td>Data Science Academy</td></tr>
+          <tr><td>FluêncIA – Inteligência Artificial</td><td>Fundação Bradesco</td></tr>
+          <tr><td>Soluções de IA no GitHub</td><td>Fundação Bradesco</td></tr>
+          <tr><td>Data Science e Inteligência Artificial – Fundamentos</td><td>Data Science Academy</td></tr>
+          <tr><td>Tomada de Decisões Guiadas por Dados</td><td>Universidade Mackenzie</td></tr>
+          <tr><td>Microsoft Fabric – Arquitetura e Engenharia de Dados</td><td>Udemy</td></tr>
+          <tr><td>IA – Algoritmos de Otimização em Python</td><td>Udemy</td></tr>
+          <tr><td>PLN com spaCy e Python</td><td>Udemy</td></tr>
+          <tr><td>Python para Data Science</td><td>Udemy</td></tr>
+          <tr><td>Sumarização de Textos com PLN</td><td>Udemy</td></tr>
+          <tr><td>Big Data e Inteligência Artificial – Fundamentos</td></tr>
+          <tr><td>Power BI + DAX</td><td>Udemy</td></tr>
+          <tr><td>Redes Neurais Artificiais em Python</td><td>Udemy</td></tr>
+          <tr><td>Modelagem Dimensional</td><td>Cetax Treinamento</td></tr>
         </tbody>
       </table>
     </div>
@@ -597,31 +660,31 @@
           <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
         </thead>
         <tbody>
-          <tr><td>Blockchain</td><td>FIAP</td><td style="text-align: center">06/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EVNole8bIbROlOXwvb5LLgMBe3z-M_-UhhJHHOpgeheUHA?e=8Nkoin" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Blockchain Advanced</td><td>FIAP</td><td style="text-align: center">06/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EYwVftW_yXZCiaTQp65gn1gBQ1PIkpXXOKAmKEwRSbJQqQ?e=SjSERB" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Versionamento de Código com Git e GitHub</td><td>DIO Academy</td><td style="text-align: center">05/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EcpZd0W6MRFHsuBlXYW4O08B0pkmcLsNl9J14TREvB1W-Q?e=Frz654" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Linguagem de Programação Python</td><td>Fundação Bradesco</td><td style="text-align: center">04/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ER8J8kfuCktBsbZuu7efKd4BBLMWm0B9QTwWeg9kB7yRnA?e=jjX0Ih" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Python Development</td><td>FIAP</td><td style="text-align: center">04/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EUUPcp406g5NqtS_gB7NdDcB2K72Q5W9QKCpMJxSb8hrzw?e=6vgd5C" target="_blank">Visualizar</a></td></tr>
-          <tr><td>AWS Cloud Practitioner Essentials</td><td>AWS Training and Certification</td><td style="text-align: center">03/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/Ebwdrkol0rRDli7q1DLWxJQB9XjJtYFaGH1tZshVRzELdA?e=ughdlD" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Python</td><td>FIAP</td><td style="text-align: center">03/2025</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ETMoJRKyzVBPjUQTUBhTDJ0B02-8VxKLBZwKz-lpDMn0aQ?e=kN4tkz" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Certificação Google Cloud Associate Engineer (GCP)</td><td>Udemy</td><td style="text-align: center">06/2024</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-024a7042-c0f4-465e-abb0-384538ffd63b/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Cloud Computing – Essencial</td><td>Udemy</td><td style="text-align: center">11/2023</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-08b9113b-aa8b-4fb7-9cd1-8af07779198c/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Segurança da Informação</td><td>Indra – In Company</td><td style="text-align: center">11/2023</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EdmtDxGx7GdHiUXkbA3JVHYB2mcXKxMz66Ismf19erWi8Q?e=rGbgGA" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Gestão Ágil com Scrum</td><td>Udemy</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-46717680-4d00-4375-ba9c-e706c1528da9/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>AZ900 – Microsoft Azure Fundamentals</td><td>Ka Solution</td><td style="text-align: center">01/2023</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EeSLEuPdmsJLuF7cnwNScfEB2TeO7KizG6t3jwCOIRw7zA?e=GkkdJr" target="_blank">Visualizar</a></td></tr>
-          <tr><td>BigData com Hadoop</td><td>Trainning Education Services</td><td style="text-align: center">03/2017</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Scrum – Gestão e Desenvolvimento Ágil de Projetos</td><td>Impacta Tecnologia</td><td style="text-align: center">03/2015</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Gestão de Projetos</td><td>Tekno Software E Serviços</td><td style="text-align: center">04/2010</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Formação Oracle Developer</td><td>IC Training – Inter-Commerce</td><td style="text-align: center">11/2005</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EXW98XxfheZCq7fxX11eNs0BeXDz-2Z-cLwljDPVZVv6rw?e=4dV80v" target="_blank">Visualizar</a></td></tr>
-          <tr><td>LCS – Linus Center Security (Red Hat)</td><td>Utah Computer Services</td><td style="text-align: center">06/2005</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>LCP – Linus Center Professional (Red Hat)</td><td>Utah Computer Services</td><td style="text-align: center">12/2004</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>LCA – Linus Center Administration (Red Hat)</td><td>Utah Computer Services</td><td style="text-align: center">06/2004</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Supporting MS Windows NT 4.0</td><td>Impacta Tecnologia</td><td style="text-align: center">10/2001</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Visual Dataflex 7.0</td><td>DataAccess – In Company</td><td style="text-align: center">07/2000</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Administração de Rede Novell Netware</td><td>Impacta Tecnologia</td><td style="text-align: center">08/1999</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Dataflex 3.1</td><td>DataAccess – In Company</td><td style="text-align: center">12/1997</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Visual Basic</td><td>Kyoei Facom</td><td style="text-align: center">11/1995</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2aROBDb_e0en6tUQ?e=OEHNL0" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Cobol Estruturado</td><td>Kyoei Facom</td><td style="text-align: center">06/1995</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
+          <tr><td>Blockchain</td><td>FIAP</td><td style="text-align: center">06/2025</td></tr>
+          <tr><td>Blockchain Advanced</td><td>FIAP</td><td style="text-align: center">06/2025</td></tr>
+          <tr><td>Versionamento de Código com Git e GitHub</td><td>DIO Academy</td></tr>
+          <tr><td>Linguagem de Programação Python</td><td>Fundação Bradesco</td></tr>
+          <tr><td>Python Development</td><td>FIAP</td></tr>
+          <tr><td>AWS Cloud Practitioner Essentials</td><td>AWS Training and Certification</td></tr>
+          <tr><td>Python</td><td>FIAP</td><td style="text-align: center">03/2025</td></tr>
+          <tr><td>Certificação Google Cloud Associate Engineer (GCP)</td><td>Udemy</td></tr>
+          <tr><td>Cloud Computing – Essencial</td><td>Udemy</td></tr>
+          <tr><td>Segurança da Informação</td><td>Indra – In Company</td></tr>
+          <tr><td>Gestão Ágil com Scrum</td><td>Udemy</td></tr>
+          <tr><td>AZ900 – Microsoft Azure Fundamentals</td><td>Ka Solution</td></tr>
+          <tr><td>BigData com Hadoop</td><td>Trainning Education Services</td></tr>
+          <tr><td>Scrum – Gestão e Desenvolvimento Ágil de Projetos</td><td>Impacta Tecnologia</td></tr>
+          <tr><td>Gestão de Projetos</td><td>Tekno Software E Serviços</td></tr>
+          <tr><td>Formação Oracle Developer</td><td>IC Training – Inter-Commerce</td></tr>
+          <tr><td>LCS – Linus Center Security (Red Hat)</td><td>Utah Computer Services</td></tr>
+          <tr><td>LCP – Linus Center Professional (Red Hat)</td><td>Utah Computer Services</td></tr>
+          <tr><td>LCA – Linus Center Administration (Red Hat)</td><td>Utah Computer Services</td></tr>
+          <tr><td>Supporting MS Windows NT 4.0</td><td>Impacta Tecnologia</td></tr>
+          <tr><td>Visual Dataflex 7.0</td><td>DataAccess – In Company</td></tr>
+          <tr><td>Administração de Rede Novell Netware</td><td>Impacta Tecnologia</td></tr>
+          <tr><td>Dataflex 3.1</td><td>DataAccess – In Company</td><td style="text-align: center">12/1997</td></tr>
+          <tr><td>Visual Basic</td><td>Kyoei Facom</td><td style="text-align: center">11/1995</td></tr>
+          <tr><td>Cobol Estruturado</td><td>Kyoei Facom</td><td style="text-align: center">06/1995</td></tr>
         </tbody>
       </table>
     </div>
@@ -633,14 +696,14 @@
           <tr><th>Curso</th><th>Instituição de Ensino</th><th>Conclusão</th><th>Certificado</th></tr>
         </thead>
         <tbody>
-          <tr><td>Comunicação Eficaz</td><td>Udemy</td><td style="text-align: center">02/2024</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-afe6075b-e36a-44bb-bd23-d5c5b3e64472" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Ética e Compliance</td><td>Indra – In Company</td><td style="text-align: center">11/2023</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Design Thinking – Formação Inicial</td><td>Udemy</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-f308c5d8-7208-4656-84b8-7f5624b07038/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Design Thinking de A a Z</td><td>Udemy</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://www.udemy.com/certificate/UC-fc1553d6-34e4-453c-b2ba-9a82f0d98103/" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Ética e Concorrência</td><td>Indra – In Company</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EUBXcwaxcxdOic9FCc97e3gBK_DvfDR9OEarI9ZKARpr6Q?e=8IedFM" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Leanmaking White Belt</td><td>Indra – In Company</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EX76YFQFNs9CgFy3KfhWIdcBRG9lrJ0ATgH3GEja59FOHA?e=ERVOxE" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Sustentabilidade</td><td>Indra – In Company</td><td style="text-align: center">10/2023</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/EYtbmEcUbi5BhzFtjbGPdwUBtSkzLc0Z2lMUpHnDGuay1g?e=IrulKm" target="_blank">Visualizar</a></td></tr>
-          <tr><td>Formação e Gerenciamento de Equipes</td><td>Instituto de Ensino IPEB</td><td style="text-align: center">06/2002</td><td style="text-align: center"><a href="https://1drv.ms/b/c/6ffe10c77c6b1869/ERDBwry9hHVAklbJMRYFpxsBuS3mNd2afake_e0en6tUQ" target="_blank">Visualizar</a></td></tr>
+          <tr><td>Comunicação Eficaz</td><td>Udemy</td><td style="text-align: center">02/2024</td></tr>
+          <tr><td>Ética e Compliance</td><td>Indra – In Company</td></tr>
+          <tr><td>Design Thinking – Formação Inicial</td><td>Udemy</td></tr>
+          <tr><td>Design Thinking de A a Z</td><td>Udemy</td></tr>
+          <tr><td>Ética e Concorrência</td><td>Indra – In Company</td></tr>
+          <tr><td>Leanmaking White Belt</td><td>Indra – In Company</td></tr>
+          <tr><td>Sustentabilidade</td><td>Indra – In Company</td></tr>
+          <tr><td>Formação e Gerenciamento de Equipes</td><td>Instituto de Ensino IPEB</td></tr>
         </tbody>
       </table>
     </div>
