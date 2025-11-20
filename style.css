@@ -14,8 +14,26 @@ body {
 header {
   background-color: var(--petroleo-dark);
   color: white;
-  padding: 40px 20px;
+  padding: 20px 10px;
   text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-top h1 {
+  margin: 0 auto;
+}
+
+.language-selector {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
 }
 
 h1, h2, h3 {
@@ -101,8 +119,27 @@ th {
 footer {
   background-color: var(--petroleo-dark);
   color: white;
-  text-align: center;
-  padding: 20px;
+  padding: 10px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 0.9em;
+}
+
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.language {
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .download-btn {
@@ -117,4 +154,16 @@ footer {
 
 .download-btn:hover {
   background-color: var(--petroleo-dark);
+}
+
+.language-selector a {
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.language-selector a:hover {
+  transform: scale(1.1);
+  text-decoration: none;
 }
